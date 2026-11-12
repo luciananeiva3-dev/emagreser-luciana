@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Planejamento das Refeições · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="planejamento">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 08 · PLANEJAMENTO DAS REFEIÇÕES
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-planejamento" aria-labelledby="h-planejamento">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 08 · Fase 3 · Organizar a vida real
+  </div>
+  <h1 id="h-planejamento" tabindex="-1">Planejamento das Refeições</h1>
+  <p class="lead">Deixar a semana decidida antes que ela comece. Sente no domingo, olhe a agenda e decida com a cabeça fria.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2" style="max-width:600px">
+      <div class="fld">
+        <label for="f_pl_sem">Semana de</label>
+        <p class="hint" id="f_pl_sem_h">O primeiro dia da semana que você está planejando.</p>
+        <input id="f_pl_sem" data-k="pl.sem" type="date" autocomplete="off" aria-describedby="f_pl_sem_h">
+      </div>
+      <div class="fld">
+        <label for="f_pl_dom">Planejada no domingo, dia</label>
+        <p class="hint" id="f_pl_dom_h">O dia em que você sentou para decidir a semana.</p>
+        <input id="f_pl_dom" data-k="pl.dom" type="date" autocomplete="off" aria-describedby="f_pl_dom_h">
+      </div>
+    </div>
+    <p class="hint" id="pl-msg" role="status" style="margin-top:8px"></p>
+  </div>
+  <div class="blk">
+    <h2>A minha semana</h2>
+    <p class="hint">Escreva o que você decidiu comer em cada refeição. Esta folha é sua: o que entra em cada refeição é escolha sua. Se pular uma refeição, deixe em branco.</p>
+    <div class="pgrid" style="margin-top:12px">
+      <div class="pday">
+        <h3>Segunda</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_0_0"><span class="sr">Segunda, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_0_0" data-k="pl.0.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_0_1"><span class="sr">Segunda, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_0_1" data-k="pl.0.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_0_2"><span class="sr">Segunda, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_0_2" data-k="pl.0.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_0_3"><span class="sr">Segunda, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_0_3" data-k="pl.0.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_0_4"><span class="sr">Segunda, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_0_4" data-k="pl.0.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_0_5"><span class="sr">Segunda, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_0_5" data-k="pl.0.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Terça</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_1_0"><span class="sr">Terça, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_1_0" data-k="pl.1.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_1_1"><span class="sr">Terça, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_1_1" data-k="pl.1.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_1_2"><span class="sr">Terça, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_1_2" data-k="pl.1.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_1_3"><span class="sr">Terça, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_1_3" data-k="pl.1.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_1_4"><span class="sr">Terça, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_1_4" data-k="pl.1.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_1_5"><span class="sr">Terça, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_1_5" data-k="pl.1.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Quarta</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_2_0"><span class="sr">Quarta, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_2_0" data-k="pl.2.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_2_1"><span class="sr">Quarta, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_2_1" data-k="pl.2.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_2_2"><span class="sr">Quarta, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_2_2" data-k="pl.2.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_2_3"><span class="sr">Quarta, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_2_3" data-k="pl.2.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_2_4"><span class="sr">Quarta, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_2_4" data-k="pl.2.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_2_5"><span class="sr">Quarta, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_2_5" data-k="pl.2.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Quinta</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_3_0"><span class="sr">Quinta, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_3_0" data-k="pl.3.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_3_1"><span class="sr">Quinta, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_3_1" data-k="pl.3.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_3_2"><span class="sr">Quinta, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_3_2" data-k="pl.3.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_3_3"><span class="sr">Quinta, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_3_3" data-k="pl.3.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_3_4"><span class="sr">Quinta, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_3_4" data-k="pl.3.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_3_5"><span class="sr">Quinta, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_3_5" data-k="pl.3.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Sexta</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_4_0"><span class="sr">Sexta, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_4_0" data-k="pl.4.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_4_1"><span class="sr">Sexta, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_4_1" data-k="pl.4.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_4_2"><span class="sr">Sexta, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_4_2" data-k="pl.4.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_4_3"><span class="sr">Sexta, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_4_3" data-k="pl.4.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_4_4"><span class="sr">Sexta, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_4_4" data-k="pl.4.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_4_5"><span class="sr">Sexta, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_4_5" data-k="pl.4.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Sábado</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_5_0"><span class="sr">Sábado, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_5_0" data-k="pl.5.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_5_1"><span class="sr">Sábado, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_5_1" data-k="pl.5.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_5_2"><span class="sr">Sábado, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_5_2" data-k="pl.5.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_5_3"><span class="sr">Sábado, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_5_3" data-k="pl.5.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_5_4"><span class="sr">Sábado, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_5_4" data-k="pl.5.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_5_5"><span class="sr">Sábado, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_5_5" data-k="pl.5.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Domingo</h3>
+        <div class="stack" style="gap:8px">
+          <div class="fld">
+            <label for="f_pl_6_0"><span class="sr">Domingo, </span>Café da manhã</label>
+            <textarea class="ln" id="f_pl_6_0" data-k="pl.6.0" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_6_1"><span class="sr">Domingo, </span>Lanche da manhã</label>
+            <textarea class="ln" id="f_pl_6_1" data-k="pl.6.1" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_6_2"><span class="sr">Domingo, </span>Almoço</label>
+            <textarea class="ln" id="f_pl_6_2" data-k="pl.6.2" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_6_3"><span class="sr">Domingo, </span>Lanche da tarde</label>
+            <textarea class="ln" id="f_pl_6_3" data-k="pl.6.3" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_6_4"><span class="sr">Domingo, </span>Jantar</label>
+            <textarea class="ln" id="f_pl_6_4" data-k="pl.6.4" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_pl_6_5"><span class="sr">Domingo, </span>Ceia</label>
+            <textarea class="ln" id="f_pl_6_5" data-k="pl.6.5" rows="1"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="fld">
+      <label for="f_pl_planob">Meu plano B da semana</label>
+      <p class="hint" id="f_pl_planob_h">O que eu faço se uma refeição planejada não puder acontecer?</p>
+      <textarea id="f_pl_planob" data-k="pl.planob" rows="3" aria-describedby="f_pl_planob_h"></textarea>
+    </div>
+    <p class="hint" style="margin-top:12px">Depois de planejar, tire a sua primeira medida no <a href="#medidas">Controle de Peso e Medidas</a> e siga para o <a href="#mapa">Mapa da Semana com Âncoras</a> e para a <a href="#compras">Lista de Compras do Essencial</a>.</p>
+  </div>
+</div>
+<aside class="marco" data-marco="planejamento">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Planejar a primeira semana no domingo.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você deixou a primeira semana decidida antes de ela começar."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="planejamento" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-dia">dizer em que dia você planejou</template>
+<template data-msg="falta-refeicoes">escrever ao menos uma refeição em cada um dos 7 dias (faltam {n})</template>
+<template data-msg="nao-domingo">Essa data não cai em um domingo. Sem problema, mas o combinado é planejar a semana no domingo.</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('planejamento',function(K){
+'use strict';
+var $=K.$,val=K.val,msg=K.msg;
+function plRender(){
+  var e=$('#pl-msg');if(!e)return;var v=val('pl.dom'),m=/^(\d{4})-(\d{2})-(\d{2})/.exec(v),t='';
+  if(m&&new Date(+m[1],+m[2]-1,+m[3]).getDay()!==0)t=msg('nao-domingo');
+  e.textContent=t;
+}
+return {
+falta:function(){var m=[],i,r,vazios=0;if(!val('pl.dom'))m.push(msg('falta-dia'));for(i=0;i<7;i++){var a=false;for(r=0;r<6;r++)if(val('pl.'+i+'.'+r))a=true;if(!a)vazios++}if(vazios)m.push(msg('falta-refeicoes',{n:vazios}));return m},
+dyn:plRender
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Termômetro da Fome · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="termometro">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 07 · TERMÔMETRO DA FOME
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-termometro" aria-labelledby="h-termometro">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 07 · Fase 2 · Enxergar o padrão
+  </div>
+  <h1 id="h-termometro" tabindex="-1">Termômetro da Fome</h1>
+  <p class="lead">Separar fome, vontade e emoção, e perceber a saciedade. Marque como o corpo está antes, durante e depois de comer.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="tgrid">
+    <div>
+      <div class="blk" style="padding:0;border:0;margin:0">
+        <h2 id="tsh">Escala da fome, de 0 a 10</h2>
+        <p class="hint">Toque no número que descreve como o seu corpo está agora. A escala ajuda você a perceber. A decisão de quanto comer fica com você.</p>
+      </div>
+      <div class="scale" role="radiogroup" aria-labelledby="tsh" style="margin-top:10px">
+        <label class="srow anc" data-v="0">
+        <input class="sr" type="radio" name="ts" value="0"><span class="sn">0</span><span class="sd">Fraqueza e tontura</span><span class="stags"></span></label>
+        <label class="srow" data-v="1">
+        <input class="sr" type="radio" name="ts" value="1"><span class="sn">1</span><span class="sd">Fome muito forte</span><span class="stags"></span></label>
+        <label class="srow" data-v="2">
+        <input class="sr" type="radio" name="ts" value="2"><span class="sn">2</span><span class="sd">Fome forte</span><span class="stags"></span></label>
+        <label class="srow anc" data-v="3">
+        <input class="sr" type="radio" name="ts" value="3"><span class="sn">3</span><span class="sd">Fome clara</span><span class="stags"></span></label>
+        <label class="srow" data-v="4">
+        <input class="sr" type="radio" name="ts" value="4"><span class="sn">4</span><span class="sd">Fome leve</span><span class="stags"></span></label>
+        <label class="srow anc" data-v="5">
+        <input class="sr" type="radio" name="ts" value="5"><span class="sn">5</span><span class="sd">Confortável</span><span class="stags"></span></label>
+        <label class="srow" data-v="6">
+        <input class="sr" type="radio" name="ts" value="6"><span class="sn">6</span><span class="sd">Quase satisfeita</span><span class="stags"></span></label>
+        <label class="srow anc" data-v="7">
+        <input class="sr" type="radio" name="ts" value="7"><span class="sn">7</span><span class="sd">Satisfeita</span><span class="stags"></span></label>
+        <label class="srow" data-v="8">
+        <input class="sr" type="radio" name="ts" value="8"><span class="sn">8</span><span class="sd">Cheia</span><span class="stags"></span></label>
+        <label class="srow" data-v="9">
+        <input class="sr" type="radio" name="ts" value="9"><span class="sn">9</span><span class="sd">Muito cheia, com desconforto</span><span class="stags"></span></label>
+        <label class="srow anc" data-v="10">
+        <input class="sr" type="radio" name="ts" value="10"><span class="sn">10</span><span class="sd">Empanturrada</span><span class="stags"></span></label>
+      </div>
+    </div>
+    <div class="sticky">
+      <div class="panel">
+        <h2 style="font-family:var(--serif);font-size:21px;margin-bottom:10px">Registro desta refeição</h2>
+        <div class="stack" style="gap:14px">
+          <div class="fld">
+            <label for="f_term_data">Data</label>
+            <p class="hint" id="f_term_data_h">Se deixar em branco, uso a data de hoje.</p>
+            <input id="f_term_data" data-k="term.data" type="date" autocomplete="off" aria-describedby="f_term_data_h">
+          </div>
+          <div class="fld">
+            <label for="f_term_ref">Refeição</label>
+            <select id="f_term_ref" data-k="term.ref"><option value="">Escolha a refeição</option><option value="Café da manhã">Café da manhã</option><option value="Lanche da manhã">Lanche da manhã</option><option value="Almoço">Almoço</option><option value="Lanche da tarde">Lanche da tarde</option><option value="Jantar">Jantar</option><option value="Ceia">Ceia</option><option value="Outro momento">Outro momento</option></select>
+          </div>
+          <div>
+            <div class="lab" id="momh">
+              Marcando a nota de
+            </div>
+            <div class="seg" role="group" aria-labelledby="momh">
+              <button type="button" aria-pressed="false" data-act="mom" data-m="antes"><b>Antes</b><span data-mv>sem nota</span></button>
+              <button type="button" aria-pressed="false" data-act="mom" data-m="durante"><b>Durante</b><span data-mv>sem nota</span></button>
+              <button type="button" aria-pressed="false" data-act="mom" data-m="depois"><b>Depois</b><span data-mv>sem nota</span></button>
+            </div>
+            <p class="hint" id="momhint" style="margin-top:8px" aria-live="polite"></p>
+          </div>
+          <fieldset class="fld">
+            <legend>Antes de comer, o que era?</legend>
+            <div class="radios">
+              <input type="radio" class="sr" id="f_term_tipo_0" name="f_term_tipo" data-k="term.tipo" value="fome">
+              <label for="f_term_tipo_0">Fome</label>
+              <input type="radio" class="sr" id="f_term_tipo_1" name="f_term_tipo" data-k="term.tipo" value="vontade">
+              <label for="f_term_tipo_1">Vontade</label>
+              <input type="radio" class="sr" id="f_term_tipo_2" name="f_term_tipo" data-k="term.tipo" value="emocao">
+              <label for="f_term_tipo_2">Emoção</label>
+            </div>
+          </fieldset>
+          <div class="fld">
+            <label for="f_term_obs">Observação</label>
+            <p class="hint" id="f_term_obs_h">O que você percebeu no corpo, no prato ou na cabeça.</p>
+            <textarea id="f_term_obs" data-k="term.obs" rows="3" aria-describedby="f_term_obs_h"></textarea>
+          </div>
+          <fieldset class="fld">
+            <legend>Parei antes do limite, por escolha?</legend>
+            <p class="hint">Limite é o ponto em que você sente que passou do que o seu corpo pediu.</p>
+            <div class="radios">
+              <input type="radio" class="sr" id="f_term_parei_0" name="f_term_parei" data-k="term.parei" value="sim">
+              <label for="f_term_parei_0">Sim</label>
+              <input type="radio" class="sr" id="f_term_parei_1" name="f_term_parei" data-k="term.parei" value="ainda nao">
+              <label for="f_term_parei_1">Ainda não</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="btnrow">
+          <button type="button" class="btn pri" data-act="t-save">Guardar este registro</button>
+          <button type="button" class="btn" data-act="t-clear">Limpar</button>
+        </div>
+        <p class="msg" id="tmsg" role="status"></p>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Minhas últimas marcações</h2>
+    <p class="hint" id="thistinfo"></p>
+    <ul class="hist" id="thist">
+    </ul>
+  </div>
+</div>
+<aside class="marco" data-marco="termometro">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Registrar que você parou antes do limite, por escolha.</p>
+    <p class="ms" data-ms data-done="Conquistado. Você parou antes do limite, por escolha." data-todo="Ainda a conquistar. Guarde um registro em que você parou antes do limite."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="nota">nota {v}</template>
+<template data-msg="sem-nota">sem nota</template>
+<template data-msg="dica-antes">Agora você marca a nota antes de comer. Toque em um número da escala.</template>
+<template data-msg="dica-durante">Agora você marca a nota durante a refeição. Toque em um número da escala.</template>
+<template data-msg="dica-depois">Agora você marca a nota depois de comer. Toque em um número da escala.</template>
+<template data-msg="hist-vazio">Nenhum registro guardado ainda.</template>
+<template data-msg="hist-muitos">As 10 mais recentes, de {n}. Todas ficam na sua ficha.</template>
+<template data-msg="hist-poucos">Do registro mais recente ao mais antigo.</template>
+<template data-msg="n-antes">antes {v}</template>
+<template data-msg="n-durante">durante {v}</template>
+<template data-msg="n-depois">depois {v}</template>
+<template data-msg="tipo-fome">Era fome</template>
+<template data-msg="tipo-vontade">Era vontade</template>
+<template data-msg="tipo-emocao">Era emoção</template>
+<template data-msg="registro-limpo">Registro limpo.</template>
+<template data-msg="marque-nota">Marque ao menos uma nota na escala antes de guardar.</template>
+<template data-msg="guardado-parei">Registro guardado. Você parou antes do limite, por escolha.</template>
+<template data-msg="guardado">Registro guardado.</template>
+<template data-msg="apagar">Apagar esta marcação?</template>
+<template data-row="stag">
+<span class="stag">{nome}</span>
+</template>
+<template data-row="hist-obs">
+<div class="hs">{t}</div>
+</template>
+<template data-row="hist-parei">
+<span class="tag">Parei antes do limite, por escolha</span>
+</template>
+<template data-row="hist">
+<li><div class="hb"><div class="hd">{cab}</div><div class="hm">{meta}</div>{!obs}{!parei}</div><button type="button" class="del" data-act="t-del" data-id="{id}" aria-label="Apagar a marcação de {dataf}">Apagar</button></li>
+</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('termometro',function(K){
+'use strict';
+var $=K.$,$$=K.$$,val=K.val,S=K.S,touch=K.touch,today=K.today,nowHM=K.nowHM,fmt=K.fmt,uid=K.uid,applyFields=K.applyFields,msg=K.msg,row=K.row;
+var momento='antes';
+/* os nomes Antes, Durante e Depois vêm dos botões que estão no HTML */
+function MOM(){return $$('[data-act=mom]').map(function(b){return [b.getAttribute('data-m'),$('b',b).textContent]})}
+function termVal(m){return S.f['term.'+m]||''}
+function renderTerm(){
+  var cur=termVal(momento);
+  $$('#s-termometro .srow').forEach(function(r){
+    var v=r.getAttribute('data-v'),tags='',has=false;
+    MOM().forEach(function(m){if(termVal(m[0])===v){tags+=row('stag',{nome:m[1]});has=true}});
+    $('.stags',r).innerHTML=tags;r.classList.toggle('has',has);r.classList.toggle('cur',cur===v);
+    $('input',r).checked=(cur===v);
+  });
+  $$('#s-termometro [data-act=mom]').forEach(function(b){var m=b.getAttribute('data-m');b.setAttribute('aria-pressed',m===momento);$('[data-mv]',b).textContent=termVal(m)!==''?msg('nota',{v:termVal(m)}):msg('sem-nota')});
+  $('#momhint').textContent=msg('dica-'+momento);
+  var log=S.term.log.slice().reverse().slice(0,10);
+  $('#thistinfo').textContent=S.term.log.length?(S.term.log.length>10?msg('hist-muitos',{n:S.term.log.length}):msg('hist-poucos')):msg('hist-vazio');
+  $('#thist').innerHTML=log.map(function(e){
+    var nums=[];if(e.a!=='')nums.push(msg('n-antes',{v:e.a}));if(e.du!=='')nums.push(msg('n-durante',{v:e.du}));if(e.p!=='')nums.push(msg('n-depois',{v:e.p}));
+    var tipo=e.tipo&&msg('tipo-'+e.tipo);
+    return row('hist',{cab:fmt(e.d)+(e.h?', '+e.h:'')+(e.ref?' · '+e.ref:''),meta:nums.join(' · ')+(tipo?' · '+tipo:''),obs:e.obs?row('hist-obs',{t:e.obs}):'',parei:e.parei==='sim'?row('hist-parei'):'',id:e.id,dataf:fmt(e.d)})}).join('');
+}
+function nextMomento(){var o=['antes','durante','depois'],n=o.filter(function(m){return termVal(m)===''})[0];return n||momento}
+function termAct(act,b){
+  var m=$('#tmsg');
+  if(act==='mom'){momento=b.getAttribute('data-m');m.textContent='';renderTerm()}
+  else if(act==='t-clear'){['antes','durante','depois','ref','tipo','obs','parei','data'].forEach(function(k){delete S.f['term.'+k]});momento='antes';applyFields();renderTerm();touch();m.textContent=msg('registro-limpo')}
+  else if(act==='t-save'){
+    if(termVal('antes')===''&&termVal('durante')===''&&termVal('depois')===''){m.textContent=msg('marque-nota');return}
+    S.term.log.push({id:uid(),d:val('term.data')||today(),h:nowHM(),ref:val('term.ref'),a:termVal('antes'),du:termVal('durante'),p:termVal('depois'),tipo:val('term.tipo'),obs:val('term.obs'),parei:val('term.parei')});
+    ['antes','durante','depois','ref','tipo','obs','parei','data'].forEach(function(k){delete S.f['term.'+k]});momento='antes';applyFields();renderTerm();touch();
+    m.textContent=S.term.log[S.term.log.length-1].parei==='sim'?msg('guardado-parei'):msg('guardado');
+  }
+  else if(act==='t-del'){if(confirm(msg('apagar'))){S.term.log=S.term.log.filter(function(e){return e.id!==b.getAttribute('data-id')});renderTerm();touch()}}
+}
+return {
+iniciar:renderTerm,
+aoAbrirFicha:function(){momento='antes';renderTerm()},
+aoMudar:function(e){var t=e.target;if(t.name==='ts'&&t.checked){S.f['term.'+momento]=t.value;momento=nextMomento();renderTerm();touch();return true}return false},
+acao:function(act,b){if(act==='mom'||act==='t-save'||act==='t-clear'||act==='t-del')termAct(act,b)},
+coletaExtra:function(out,add,dataHora){
+  if(S.term.log.length){
+    var tp={fome:'era fome',vontade:'era vontade',emocao:'era emoção'};
+    out.push('','[Minhas marcações]');
+    S.term.log.forEach(function(e){
+      var nums=[];if(e.a!=='')nums.push('antes '+e.a);if(e.du!=='')nums.push('durante '+e.du);if(e.p!=='')nums.push('depois '+e.p);
+      add(dataHora(e)+(e.ref?', '+e.ref:'')+': '+nums.join(', ')+(tp[e.tipo]?', '+tp[e.tipo]:'')+(e.parei==='sim'?', parei antes do limite por escolha':'')+(e.obs?'. '+e.obs:''));
+    });
+  }
+}
+};
+});
+</script>
+</body></html>

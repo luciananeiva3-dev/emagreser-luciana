@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-raiz="" data-ferramenta="indice">
+<noscript><p style="padding:20px;font-family:sans-serif">Este kit precisa do JavaScript ligado no navegador.</p></noscript>
+
+<section class="sheet" id="s-inicio" aria-labelledby="h-inicio">
+  <div class="printhead"><span class="brand">Emagre<span>SER</span></span><span></span><span>Impresso em <span data-print-date></span></span></div>
+  <header class="shead">
+    <div class="eyebrow">Método EmagreSER · Luciana Neiva</div>
+    <h1 id="h-inicio" tabindex="-1">Suas ferramentas do método EmagreSER</h1>
+    <p class="lead" data-nuvem="As ferramentas de cada fase da sua jornada, para preencher no seu ritmo, no computador ou no celular. Escolha uma, toque em Abrir ferramenta e escreva com calma. Tudo o que você escreve fica guardado e volta quando você abrir o seu link, em qualquer aparelho.">As ferramentas de cada fase da sua jornada, para preencher no seu ritmo, no computador ou no celular. Escolha uma, toque em Abrir ferramenta e escreva com calma. Tudo o que você escreve fica guardado neste aparelho.</p>
+  </header>
+
+  <div class="paper">
+    <h2>Antes de começar</h2>
+    <div class="howg">
+      <div class="how"><h3>Salva sozinho</h3><p data-nuvem="Quando aparecer o aviso Salvo, o que você escreveu já está guardado no servidor e volta quando você abrir o seu link. Não precisa apertar nada.">Quando aparecer o aviso Salvo, o que você escreveu já está guardado neste aparelho. Não precisa apertar nada.</p></div>
+      <div class="how"><h3>Baixe a sua ficha</h3><p>Baixar minha ficha cria um arquivo com tudo, fotos incluídas, para você guardar ou abrir em outro aparelho, com Abrir ficha.</p></div>
+      <div class="how"><h3>Os marcos</h3><p>O marco se conquista na prática, no seu dia a dia. Registrar na ferramenta ajuda você a ver o caminho, e a Luciana confirma o marco com você na conversa do atendimento.</p></div>
+      <div class="how"><h3>Imprima ou salve em PDF</h3><p>Cada ferramenta tem o seu botão, com a folha limpa, sem menu e sem botões.</p></div>
+      <div class="how"><h3 data-nuvem="A Luciana acompanha">Envie para a Luciana</h3><p data-nuvem="Você não precisa enviar nada: o que você escreve fica guardado com o seu link, e a Luciana consegue ver para acompanhar você. Se quiser, baixe a sua ficha e mande pelo WhatsApp.">O botão Enviar para a Luciana manda o que você escreveu para ela ver. Se o envio não funcionar, baixe a sua ficha e mande pelo WhatsApp.</p></div>
+      <div class="how"><h3 data-nuvem="Guarde o seu link">Use sempre o mesmo navegador</h3><p data-nuvem="O seu link é só seu: guarde a mensagem em que a Luciana mandou e não passe para ninguém, porque quem tiver o link consegue ver e mudar a sua ficha. As fotos nunca saem do aparelho.">O que fica guardado vale para este navegador. O que você escreve só sai deste aparelho se você tocar em Enviar para a Luciana. As fotos nunca saem.</p></div>
+    </div>
+    <div class="g2" style="margin-top:20px;align-items:end">
+      <div class="fld"><label for="f_perfil_nome">Seu nome</label><p class="hint" id="f_perfil_nome_h">Aparece no topo das folhas impressas e no nome do arquivo da ficha.</p><input id="f_perfil_nome" data-k="perfil.nome" type="text" autocomplete="off" aria-describedby="f_perfil_nome_h"></div>
+      <p class="hint" id="lastExp" style="margin:0 0 10px"></p>
+    </div>
+  </div>
+
+  <div class="paper noprint">
+    <h2>Sua ficha e seu progresso</h2>
+    <div id="progresso" class="prog" style="margin-top:12px"></div>
+    <div class="ficha-ctl">
+      <button type="button" class="btn pri" data-act="export">Baixar minha ficha</button>
+      <button type="button" class="btn" data-act="import">Abrir ficha</button>
+    </div>
+  </div>
+
+  <div id="envio-home"></div>
+
+  <div id="lista-fases"></div>
+
+  <div class="paper" style="margin-top:34px">
+    <h2>Referência rápida, em ordem de número</h2>
+    <p class="hint">Do 01 ao 22. Serve para achar uma ferramenta pelo número ou pelo nome.</p>
+    <ul class="qlist" id="lista-rapida"></ul>
+  </div>
+</section>
+
+<!-- Formulário oculto: é ele que permite ao Netlify receber as fichas. Não apague nem mude os nomes dos campos. -->
+<form name="ficha-emagreser" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="ficha-emagreser">
+  <p><label>Não preencha este campo: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <input type="hidden" name="subject">
+  <input type="text" name="nome">
+  <input type="text" name="data">
+  <textarea name="resumo"></textarea>
+  <textarea name="conteudo"></textarea>
+  <input type="checkbox" name="consentimento" value="sim">
+</form>
+
+<script src="lista.js"></script>
+<script src="config.js"></script>
+<script src="kit.js"></script>
+<script>Kit.indice();</script>
+</body></html>

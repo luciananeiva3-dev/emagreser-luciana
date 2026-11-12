@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Controle de Peso e Medidas · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="medidas">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 17 · CONTROLE DE PESO E MEDIDAS
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-medidas" aria-labelledby="h-medidas">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 17 · Fase 3 · Organizar a vida real
+  </div>
+  <h1 id="h-medidas" tabindex="-1">Controle de Peso e Medidas</h1>
+  <p class="lead">Acompanhar a evolução com dado comparável, para ver o que o número sozinho esconde.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="rule">
+  <b>Regra da folha</b>
+  <p>Sempre o mesmo dia, o mesmo horário e a mesma condição.</p>
+</div>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_med_dia">Dia da semana</label>
+        <select id="f_med_dia" data-k="med.dia"><option value="">Escolha o dia</option><option value="Segunda">Segunda</option><option value="Terça">Terça</option><option value="Quarta">Quarta</option><option value="Quinta">Quinta</option><option value="Sexta">Sexta</option><option value="Sábado">Sábado</option><option value="Domingo">Domingo</option></select>
+      </div>
+      <div class="fld">
+        <label for="f_med_hora">Horário</label>
+        <input id="f_med_hora" data-k="med.hora" type="time" autocomplete="off">
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fld">
+        <label for="f_med_cond">Condição</label>
+        <p class="hint" id="f_med_cond_h">Por exemplo: ao acordar, depois do banheiro, sem roupa pesada.</p>
+        <input id="f_med_cond" data-k="med.cond" type="text" autocomplete="off" aria-describedby="f_med_cond_h">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Datas das medições</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_med_d1">Data da semana 1</label>
+        <input id="f_med_d1" data-k="med.d1" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_med_d2">Data da semana 2</label>
+        <input id="f_med_d2" data-k="med.d2" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_med_d3">Data da semana 3</label>
+        <input id="f_med_d3" data-k="med.d3" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_med_d4">Data da semana 4</label>
+        <input id="f_med_d4" data-k="med.d4" type="date" autocomplete="off">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Peso e medidas por semana</h2>
+    <p class="hint">O início vem da sua <a href="#linha">Linha de Partida</a>. Preencha uma vez por semana, no mesmo dia e horário.</p>
+    <div class="cgrid" style="margin-top:12px">
+      <div class="pday">
+        <h3>Peso</h3>
+        <p class="hint" data-med="peso" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_peso_1"><span class="sr">Peso, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_peso_1" data-k="med.peso.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peso_2"><span class="sr">Peso, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_peso_2" data-k="med.peso.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peso_3"><span class="sr">Peso, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_peso_3" data-k="med.peso.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peso_4"><span class="sr">Peso, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_peso_4" data-k="med.peso.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Cintura</h3>
+        <p class="hint" data-med="cintura" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_cintura_1"><span class="sr">Cintura, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_cintura_1" data-k="med.cintura.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_cintura_2"><span class="sr">Cintura, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_cintura_2" data-k="med.cintura.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_cintura_3"><span class="sr">Cintura, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_cintura_3" data-k="med.cintura.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_cintura_4"><span class="sr">Cintura, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_cintura_4" data-k="med.cintura.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Quadril</h3>
+        <p class="hint" data-med="quadril" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_quadril_1"><span class="sr">Quadril, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_quadril_1" data-k="med.quadril.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_quadril_2"><span class="sr">Quadril, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_quadril_2" data-k="med.quadril.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_quadril_3"><span class="sr">Quadril, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_quadril_3" data-k="med.quadril.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_quadril_4"><span class="sr">Quadril, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_quadril_4" data-k="med.quadril.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Peito</h3>
+        <p class="hint" data-med="peito" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_peito_1"><span class="sr">Peito, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_peito_1" data-k="med.peito.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peito_2"><span class="sr">Peito, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_peito_2" data-k="med.peito.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peito_3"><span class="sr">Peito, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_peito_3" data-k="med.peito.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_peito_4"><span class="sr">Peito, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_peito_4" data-k="med.peito.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Braço</h3>
+        <p class="hint" data-med="braco" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_braco_1"><span class="sr">Braço, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_braco_1" data-k="med.braco.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_braco_2"><span class="sr">Braço, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_braco_2" data-k="med.braco.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_braco_3"><span class="sr">Braço, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_braco_3" data-k="med.braco.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_braco_4"><span class="sr">Braço, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_braco_4" data-k="med.braco.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pday">
+        <h3>Coxa</h3>
+        <p class="hint" data-med="coxa" style="margin:0"></p>
+        <div class="g4m">
+          <div class="fld">
+            <label for="f_med_coxa_1"><span class="sr">Coxa, </span>Semana 1</label>
+            <div class="inwrap">
+              <input id="f_med_coxa_1" data-k="med.coxa.1" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_coxa_2"><span class="sr">Coxa, </span>Semana 2</label>
+            <div class="inwrap">
+              <input id="f_med_coxa_2" data-k="med.coxa.2" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_coxa_3"><span class="sr">Coxa, </span>Semana 3</label>
+            <div class="inwrap">
+              <input id="f_med_coxa_3" data-k="med.coxa.3" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+          <div class="fld">
+            <label for="f_med_coxa_4"><span class="sr">Coxa, </span>Semana 4</label>
+            <div class="inwrap">
+              <input id="f_med_coxa_4" data-k="med.coxa.4" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="msg" id="med-parado" role="status"></p>
+  </div>
+  <div class="blk">
+    <div class="q hl" style="margin:0">
+      <div class="fld">
+        <label for="f_med_melhorou">O que melhorou além do número</label>
+        <p class="hint" id="f_med_melhorou_h">A balança é só um dado. Escreva o que mudou além dela: roupa, sono, disposição, fôlego, humor, a forma como você se olha.</p>
+        <textarea id="f_med_melhorou" data-k="med.melhorou" rows="5" aria-describedby="f_med_melhorou_h"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="medidas">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Tirar a sua primeira medida e registrar.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você tirou a sua primeira medida e registrou."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="medidas" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta">registrar a sua primeira medida: o peso ou outra medida, de qualquer semana</template>
+<template data-msg="inicio">Início: {v} {u}.</template>
+<template data-msg="inicio-vazio">Início: preencha a Linha de Partida.</template>
+<template data-msg="ultima">Última medida: {v} {u}, semana {w}.</template>
+<template data-msg="variacao">Variação desde o início: {v} {u}.</template>
+<template data-msg="parado">O peso ficou igual nas duas últimas medidas. Olhe as outras medidas e escreva abaixo o que melhorou além do número.</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('medidas',function(K){
+'use strict';
+var $=K.$,num=K.num,fnum=K.fnum,sgn=K.sgn,val=K.val,msg=K.msg;
+var MED=['peso','cintura','quadril','peito','braco','coxa'];
+function medRender(){
+  var pesoSem=[];
+  MED.forEach(function(m){
+    var st=num(val('lp.'+m)),last=null,ln=0,prev=null,w,v,k=0,txt='';
+    var e=$('[data-med='+m+']'),u=e?$('.unit',e.parentNode).textContent:'';
+    for(w=1;w<=4;w++){v=num(val('med.'+m+'.'+w));if(v!==null){prev=last;last=v;ln=w;k++}}
+    if(m==='peso')for(w=1;w<=4;w++){v=num(val('med.peso.'+w));if(v!==null)pesoSem.push(v)}
+    txt=st!==null?msg('inicio',{v:fnum(st),u:u}):msg('inicio-vazio');
+    if(last!==null){txt+=' '+msg('ultima',{v:fnum(last),u:u,w:ln});if(st!==null)txt+=' '+msg('variacao',{v:sgn(last-st),u:u})}
+    if(e&&e.textContent!==txt)e.textContent=txt;
+  });
+  var p=$('#med-parado'),n=pesoSem.length;
+  if(p)p.textContent=(n>=2&&pesoSem[n-1]===pesoSem[n-2])?msg('parado'):'';
+}
+return {
+falta:function(){var n=0,w;MED.forEach(function(x){for(w=1;w<=4;w++)if(num(val('med.'+x+'.'+w))!==null)n++});return n?[]:[msg('falta')]},
+dyn:medRender
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carta da Mulher que Já É · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="carta">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 20 · CARTA DA MULHER QUE JÁ É
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-carta" aria-labelledby="h-carta">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 20 · Fase 7 · Sustentar e virar identidade
+  </div>
+  <h1 id="h-carta" tabindex="-1">Carta da Mulher que Já É</h1>
+  <p class="lead">Escrever a identidade antes de o corpo mudar, para se reconhecer quando ele chegar.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2" style="max-width:600px">
+      <div class="fld">
+        <label for="f_car_data">Escrita em</label>
+        <input id="f_car_data" data-k="car.data" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_car_eu">Eu,</label>
+        <input id="f_car_eu" data-k="car.eu" type="text" autocomplete="off" placeholder="Escreva o seu nome">
+      </div>
+    </div>
+    <p class="hint" style="margin-top:12px">Escreva no presente, como se já fosse verdade. A mulher que você descreve aqui é a que você já está se tornando.</p>
+  </div>
+  <div class="blk">
+    <div class="stack">
+      <div class="fld">
+        <label for="f_car_vivo">Como eu vivo</label>
+        <p class="hint" id="f_car_vivo_h">A minha rotina, os meus hábitos, o que faço no dia a dia.</p>
+        <textarea id="f_car_vivo" data-k="car.vivo" rows="5" aria-describedby="f_car_vivo_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_car_decido">Como eu decido</label>
+        <p class="hint" id="f_car_decido_h">O que escolho no prato, na agenda, quando alguém me oferece algo.</p>
+        <textarea id="f_car_decido" data-k="car.decido" rows="5" aria-describedby="f_car_decido_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_car_sinto">Como eu me sinto</label>
+        <p class="hint" id="f_car_sinto_h">Comigo, com o meu corpo, com a comida.</p>
+        <textarea id="f_car_sinto" data-k="car.sinto" rows="5" aria-describedby="f_car_sinto_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_car_reler">Vou reler esta carta em</label>
+        <p class="hint" id="f_car_reler_h">Uma data combinada com você mesma.</p>
+        <input id="f_car_reler" data-k="car.reler" type="date" autocomplete="off" aria-describedby="f_car_reler_h">
+      </div>
+      <div class="fld">
+        <label for="f_car_ass">Assinatura</label>
+        <input id="f_car_ass" data-k="car.ass" type="text" autocomplete="off" placeholder="Escreva o seu nome">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paper">
+  <h2>Quando eu reler a minha carta</h2>
+  <p class="hint">Na data combinada, releia a carta e escreva o que já virou verdade.</p>
+  <div class="stack" style="margin-top:10px">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_car_rel_data">Data da releitura</label>
+        <input id="f_car_rel_data" data-k="car.rel.data" type="date" autocomplete="off">
+      </div>
+    </div>
+    <div class="fld">
+      <label for="f_car_rel_verdade">O que já virou verdade</label>
+      <textarea id="f_car_rel_verdade" data-k="car.rel.verdade" rows="5"></textarea>
+    </div>
+    <div class="fld">
+      <label for="f_car_rel_falta">O que eu ainda quero cultivar</label>
+      <textarea id="f_car_rel_falta" data-k="car.rel.falta" rows="4"></textarea>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="carta">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Reler a sua carta e reconhecer o que já virou verdade.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você releu a sua carta e reconheceu o que já virou verdade."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="carta" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-carta">escrever a carta nos 3 blocos</template>
+<template data-msg="falta-verdade">reler a carta e escrever o que já virou verdade</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('carta',function(K){
+'use strict';
+var val=K.val,msg=K.msg;
+return {
+falta:function(){var m=[];if(!val('car.vivo')||!val('car.decido')||!val('car.sinto'))m.push(msg('falta-carta'));if(!val('car.rel.verdade'))m.push(msg('falta-verdade'));return m}
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mural da Transformação · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="mural">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 03 · MURAL DA TRANSFORMAÇÃO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-mural" aria-labelledby="h-mural">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 03 · Fase 1 · Despertar
+  </div>
+  <h1 id="h-mural" tabindex="-1">Mural da Transformação</h1>
+  <p class="lead">Fixar quem você está se tornando e o seu motivo, para ver todo dia. Depois de preencher, imprima e deixe em um lugar que você vê todos os dias.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk">
+    <div class="g2" style="max-width:520px">
+      <div class="photo" data-ph="mural.hoje">
+        <div class="lab" id="ph_mural_hoje_l">
+          Foto de hoje
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_mural_hoje_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_mural_hoje" accept="image/*" data-phin="mural.hoje" aria-label="Escolher foto: Foto de hoje">
+        <label class="btn sm" for="ph_mural_hoje" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="mural.hoje" hidden>Remover</button>
+      </div>
+      <div class="photo" data-ph="mural.ref">
+        <div class="lab" id="ph_mural_ref_l">
+          Foto de referência
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_mural_ref_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_mural_ref" accept="image/*" data-phin="mural.ref" aria-label="Escolher foto: Foto de referência">
+        <label class="btn sm" for="ph_mural_ref" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="mural.ref" hidden>Remover</button>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="mantra">
+      <label for="f_mural_mantra">Meu mantra</label>
+      <p class="hint">Escreva na primeira pessoa e no presente, como se já fosse verdade.</p>
+      <textarea id="f_mural_mantra" data-k="mural.mantra" rows="3" placeholder="Eu sou magra, me alimento corretamente e me exercito 6x por semana"></textarea>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Onde eu estou e aonde eu vou</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_mural_peso">Peso inicial</label>
+        <div class="inwrap">
+          <input id="f_mural_peso" data-k="mural.peso" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_mural_meta">Minha meta</label>
+        <p class="hint" id="f_mural_meta_h">O peso ou o resultado que você quer.</p>
+        <input id="f_mural_meta" data-k="mural.meta" type="text" autocomplete="off" aria-describedby="f_mural_meta_h">
+      </div>
+      <div class="fld">
+        <label for="f_mural_ini">Data de início</label>
+        <input id="f_mural_ini" data-k="mural.ini" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_mural_alvo">Data alvo</label>
+        <input id="f_mural_alvo" data-k="mural.alvo" type="date" autocomplete="off">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="g2" style="gap:26px 34px">
+      <div>
+        <h2>O que eu vou ganhar</h2>
+        <p class="hint">Cinco coisas que você ganha quando chegar lá.</p>
+        <div class="stack" style="gap:10px">
+          <div class="nline">
+            <span class="num" aria-hidden="true">1</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_g1">O que eu vou ganhar, 1</label>
+              <textarea class="ln" id="f_mural_g1" data-k="mural.g1" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">2</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_g2">O que eu vou ganhar, 2</label>
+              <textarea class="ln" id="f_mural_g2" data-k="mural.g2" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">3</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_g3">O que eu vou ganhar, 3</label>
+              <textarea class="ln" id="f_mural_g3" data-k="mural.g3" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">4</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_g4">O que eu vou ganhar, 4</label>
+              <textarea class="ln" id="f_mural_g4" data-k="mural.g4" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">5</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_g5">O que eu vou ganhar, 5</label>
+              <textarea class="ln" id="f_mural_g5" data-k="mural.g5" rows="1"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Pensamentos sabotadores</h2>
+        <p class="hint">Cinco pensamentos que aparecem para te tirar do caminho.</p>
+        <div class="stack" style="gap:10px">
+          <div class="nline">
+            <span class="num" aria-hidden="true">1</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_s1">Pensamento sabotador, 1</label>
+              <textarea class="ln" id="f_mural_s1" data-k="mural.s1" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">2</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_s2">Pensamento sabotador, 2</label>
+              <textarea class="ln" id="f_mural_s2" data-k="mural.s2" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">3</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_s3">Pensamento sabotador, 3</label>
+              <textarea class="ln" id="f_mural_s3" data-k="mural.s3" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">4</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_s4">Pensamento sabotador, 4</label>
+              <textarea class="ln" id="f_mural_s4" data-k="mural.s4" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="nline">
+            <span class="num" aria-hidden="true">5</span>
+            <div style="flex:1;min-width:0">
+              <label class="sr" for="f_mural_s5">Pensamento sabotador, 5</label>
+              <textarea class="ln" id="f_mural_s5" data-k="mural.s5" rows="1"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="mural">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Escrever o seu próprio mantra.</p>
+    <p class="ms" data-ms data-done="Conquistado. Você escreveu o seu próprio mantra." data-todo="Ainda a conquistar. Escreva o seu mantra."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('mural',function(K){
+'use strict';
+
+return {};
+});
+</script>
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formulário de Conscientização · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="formulario">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 02 · FORMULÁRIO DE CONSCIENTIZAÇÃO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-formulario" aria-labelledby="h-formulario">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 02 · Fase 1 · Despertar
+  </div>
+  <h1 id="h-formulario" tabindex="-1">Formulário de Conscientização</h1>
+  <p class="lead">Ampliar a visão do seu cenário antes de mudar qualquer coisa. Leia cada pergunta com calma e escreva o quanto precisar.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="quote">
+  Responda com sinceridade. Não procure a resposta certa. Procure a resposta verdadeira.
+</div>
+<div class="paper">
+  <div class="q">
+    <label for="f_q1"><span class="qn" aria-hidden="true">1</span><span><span class="sr">Pergunta 1. </span>Por que você está acima do peso?</span></label>
+    <textarea id="f_q1" data-k="q1" rows="6"></textarea>
+  </div>
+  <div class="q">
+    <label for="f_q2"><span class="qn" aria-hidden="true">2</span><span><span class="sr">Pergunta 2. </span>O que você já sabe que precisa fazer para emagrecer, mas continua tendo dificuldade de colocar em prática?</span></label>
+    <textarea id="f_q2" data-k="q2" rows="6"></textarea>
+  </div>
+  <div class="q">
+    <label for="f_q3"><span class="qn" aria-hidden="true">3</span><span><span class="sr">Pergunta 3. </span>Quando você sai do planejado, o que faz você continuar no comportamento em vez de simplesmente retomar?</span></label>
+    <textarea id="f_q3" data-k="q3" rows="6"></textarea>
+  </div>
+  <div class="q">
+    <label for="f_q4"><span class="qn" aria-hidden="true">4</span><span><span class="sr">Pergunta 4. </span>O que você costuma dizer a si mesma para justificar comportamentos que sabe que não contribuem para o seu objetivo?</span></label>
+    <textarea id="f_q4" data-k="q4" rows="6"></textarea>
+  </div>
+  <div class="q hl">
+    <label for="f_q5"><span class="qn" aria-hidden="true">5</span><span><span class="sr">Pergunta 5. </span>O que você ganha por estar acima do peso?</span></label>
+    <textarea id="f_q5" data-k="q5" rows="6"></textarea>
+  </div>
+  <div class="q">
+    <label for="f_q6"><span class="qn" aria-hidden="true">6</span><span><span class="sr">Pergunta 6. </span>O que você vai ganhar quando estiver com o peso ideal?</span></label>
+    <textarea id="f_q6" data-k="q6" rows="6"></textarea>
+  </div>
+  <div class="q">
+    <label for="f_q7"><span class="qn" aria-hidden="true">7</span><span><span class="sr">Pergunta 7. </span>Depois de responder essas perguntas, o que você percebe que realmente precisa mudar para conseguir emagrecer e, principalmente, manter o resultado?</span></label>
+    <textarea id="f_q7" data-k="q7" rows="6"></textarea>
+  </div>
+</div>
+<aside class="marco" data-marco="formulario">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Nomear o que você ganha por estar acima do peso.</p>
+    <p class="ms" data-ms data-done="Conquistado. Você nomeou o que ganha por estar acima do peso." data-todo="Ainda a conquistar. Responda a pergunta 5."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('formulario',function(K){
+'use strict';
+
+return {};
+});
+</script>
+</body></html>

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diário de 7 Dias: Alimentos e Emoções · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="diario">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 05 · DIÁRIO DE 7 DIAS: ALIMENTOS E EMOÇÕES
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-diario" aria-labelledby="h-diario">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 05 · Fase 2 · Enxergar o padrão
+  </div>
+  <h1 id="h-diario" tabindex="-1">Diário de 7 Dias: Alimentos e Emoções</h1>
+  <p class="lead">Durante 7 dias, registre o que você come, quando come e o que sente. Escreva sem julgamento: o objetivo é enxergar o seu padrão.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="dtabs" role="tablist" aria-label="Dias do diário">
+    <button type="button" role="tab" class="dtab" id="tab-d1" aria-selected="false" aria-controls="day-d1" data-act="day" data-d="1" data-st="0"><span class="t">Dia</span><span class="n">1</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d2" aria-selected="false" aria-controls="day-d2" data-act="day" data-d="2" data-st="0"><span class="t">Dia</span><span class="n">2</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d3" aria-selected="false" aria-controls="day-d3" data-act="day" data-d="3" data-st="0"><span class="t">Dia</span><span class="n">3</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d4" aria-selected="false" aria-controls="day-d4" data-act="day" data-d="4" data-st="0"><span class="t">Dia</span><span class="n">4</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d5" aria-selected="false" aria-controls="day-d5" data-act="day" data-d="5" data-st="0"><span class="t">Dia</span><span class="n">5</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d6" aria-selected="false" aria-controls="day-d6" data-act="day" data-d="6" data-st="0"><span class="t">Dia</span><span class="n">6</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab" id="tab-d7" aria-selected="false" aria-controls="day-d7" data-act="day" data-d="7" data-st="0"><span class="t">Dia</span><span class="n">7</span><span class="dm" aria-hidden="true"></span><span class="sr" data-dtxt></span></button>
+    <button type="button" role="tab" class="dtab wide" id="tab-dfim" aria-selected="false" aria-controls="day-dfim" data-act="day" data-d="fim" data-st="0"><span class="dm" aria-hidden="true"></span>Fechamento dos 7 dias<span class="sr" data-dtxt></span></button>
+  </div>
+  <div class="legend" aria-label="Legenda">
+    <span><i class="e"></i>em branco</span><span><i class="h"></i>em andamento</span><span><i class="f"></i>dia concluído, com balanço escrito</span>
+  </div>
+  <div class="day" role="tabpanel" id="day-d1" aria-labelledby="tab-d1" hidden>
+    <h2>Dia 1</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d1_data">Data deste dia</label>
+          <input id="f_d1_data" data-k="d1.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d1_h0">Horário</label>
+            <input id="f_d1_h0" data-k="d1.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r0">O que comi, café da manhã</label>
+          <textarea id="f_d1_r0" data-k="d1.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d1_h1">Horário</label>
+            <input id="f_d1_h1" data-k="d1.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d1_r1" data-k="d1.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d1_h2">Horário</label>
+            <input id="f_d1_h2" data-k="d1.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r2">O que comi, almoço</label>
+          <textarea id="f_d1_r2" data-k="d1.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d1_h3">Horário</label>
+            <input id="f_d1_h3" data-k="d1.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d1_r3" data-k="d1.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d1_h4">Horário</label>
+            <input id="f_d1_h4" data-k="d1.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r4">O que comi, jantar</label>
+          <textarea id="f_d1_r4" data-k="d1.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d1_h5">Horário</label>
+            <input id="f_d1_h5" data-k="d1.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d1_r5">O que comi, ceia</label>
+          <textarea id="f_d1_r5" data-k="d1.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d1_sab">O que me sabotou hoje</label>
+          <textarea id="f_d1_sab" data-k="d1.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d1_des">Maiores desafios do dia</label>
+          <textarea id="f_d1_des" data-k="d1.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d1_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d1_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d1_sen" data-k="d1.sen" rows="3" aria-describedby="f_d1_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d1_pos">Pontos positivos do dia</label>
+          <textarea id="f_d1_pos" data-k="d1.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d1_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d1_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d1_bal" data-k="d1.bal" rows="3" aria-describedby="f_d1_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <span></span>
+      <button type="button" class="btn pri" data-act="day" data-d="2">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d2" aria-labelledby="tab-d2" hidden>
+    <h2>Dia 2</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d2_data">Data deste dia</label>
+          <input id="f_d2_data" data-k="d2.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d2_h0">Horário</label>
+            <input id="f_d2_h0" data-k="d2.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r0">O que comi, café da manhã</label>
+          <textarea id="f_d2_r0" data-k="d2.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d2_h1">Horário</label>
+            <input id="f_d2_h1" data-k="d2.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d2_r1" data-k="d2.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d2_h2">Horário</label>
+            <input id="f_d2_h2" data-k="d2.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r2">O que comi, almoço</label>
+          <textarea id="f_d2_r2" data-k="d2.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d2_h3">Horário</label>
+            <input id="f_d2_h3" data-k="d2.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d2_r3" data-k="d2.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d2_h4">Horário</label>
+            <input id="f_d2_h4" data-k="d2.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r4">O que comi, jantar</label>
+          <textarea id="f_d2_r4" data-k="d2.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d2_h5">Horário</label>
+            <input id="f_d2_h5" data-k="d2.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d2_r5">O que comi, ceia</label>
+          <textarea id="f_d2_r5" data-k="d2.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d2_sab">O que me sabotou hoje</label>
+          <textarea id="f_d2_sab" data-k="d2.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d2_des">Maiores desafios do dia</label>
+          <textarea id="f_d2_des" data-k="d2.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d2_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d2_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d2_sen" data-k="d2.sen" rows="3" aria-describedby="f_d2_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d2_pos">Pontos positivos do dia</label>
+          <textarea id="f_d2_pos" data-k="d2.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d2_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d2_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d2_bal" data-k="d2.bal" rows="3" aria-describedby="f_d2_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="1">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="3">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d3" aria-labelledby="tab-d3" hidden>
+    <h2>Dia 3</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d3_data">Data deste dia</label>
+          <input id="f_d3_data" data-k="d3.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d3_h0">Horário</label>
+            <input id="f_d3_h0" data-k="d3.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r0">O que comi, café da manhã</label>
+          <textarea id="f_d3_r0" data-k="d3.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d3_h1">Horário</label>
+            <input id="f_d3_h1" data-k="d3.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d3_r1" data-k="d3.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d3_h2">Horário</label>
+            <input id="f_d3_h2" data-k="d3.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r2">O que comi, almoço</label>
+          <textarea id="f_d3_r2" data-k="d3.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d3_h3">Horário</label>
+            <input id="f_d3_h3" data-k="d3.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d3_r3" data-k="d3.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d3_h4">Horário</label>
+            <input id="f_d3_h4" data-k="d3.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r4">O que comi, jantar</label>
+          <textarea id="f_d3_r4" data-k="d3.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d3_h5">Horário</label>
+            <input id="f_d3_h5" data-k="d3.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d3_r5">O que comi, ceia</label>
+          <textarea id="f_d3_r5" data-k="d3.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d3_sab">O que me sabotou hoje</label>
+          <textarea id="f_d3_sab" data-k="d3.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d3_des">Maiores desafios do dia</label>
+          <textarea id="f_d3_des" data-k="d3.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d3_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d3_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d3_sen" data-k="d3.sen" rows="3" aria-describedby="f_d3_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d3_pos">Pontos positivos do dia</label>
+          <textarea id="f_d3_pos" data-k="d3.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d3_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d3_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d3_bal" data-k="d3.bal" rows="3" aria-describedby="f_d3_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="2">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="4">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d4" aria-labelledby="tab-d4" hidden>
+    <h2>Dia 4</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d4_data">Data deste dia</label>
+          <input id="f_d4_data" data-k="d4.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d4_h0">Horário</label>
+            <input id="f_d4_h0" data-k="d4.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r0">O que comi, café da manhã</label>
+          <textarea id="f_d4_r0" data-k="d4.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d4_h1">Horário</label>
+            <input id="f_d4_h1" data-k="d4.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d4_r1" data-k="d4.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d4_h2">Horário</label>
+            <input id="f_d4_h2" data-k="d4.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r2">O que comi, almoço</label>
+          <textarea id="f_d4_r2" data-k="d4.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d4_h3">Horário</label>
+            <input id="f_d4_h3" data-k="d4.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d4_r3" data-k="d4.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d4_h4">Horário</label>
+            <input id="f_d4_h4" data-k="d4.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r4">O que comi, jantar</label>
+          <textarea id="f_d4_r4" data-k="d4.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d4_h5">Horário</label>
+            <input id="f_d4_h5" data-k="d4.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d4_r5">O que comi, ceia</label>
+          <textarea id="f_d4_r5" data-k="d4.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d4_sab">O que me sabotou hoje</label>
+          <textarea id="f_d4_sab" data-k="d4.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d4_des">Maiores desafios do dia</label>
+          <textarea id="f_d4_des" data-k="d4.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d4_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d4_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d4_sen" data-k="d4.sen" rows="3" aria-describedby="f_d4_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d4_pos">Pontos positivos do dia</label>
+          <textarea id="f_d4_pos" data-k="d4.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d4_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d4_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d4_bal" data-k="d4.bal" rows="3" aria-describedby="f_d4_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="3">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="5">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d5" aria-labelledby="tab-d5" hidden>
+    <h2>Dia 5</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d5_data">Data deste dia</label>
+          <input id="f_d5_data" data-k="d5.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d5_h0">Horário</label>
+            <input id="f_d5_h0" data-k="d5.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r0">O que comi, café da manhã</label>
+          <textarea id="f_d5_r0" data-k="d5.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d5_h1">Horário</label>
+            <input id="f_d5_h1" data-k="d5.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d5_r1" data-k="d5.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d5_h2">Horário</label>
+            <input id="f_d5_h2" data-k="d5.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r2">O que comi, almoço</label>
+          <textarea id="f_d5_r2" data-k="d5.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d5_h3">Horário</label>
+            <input id="f_d5_h3" data-k="d5.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d5_r3" data-k="d5.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d5_h4">Horário</label>
+            <input id="f_d5_h4" data-k="d5.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r4">O que comi, jantar</label>
+          <textarea id="f_d5_r4" data-k="d5.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d5_h5">Horário</label>
+            <input id="f_d5_h5" data-k="d5.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d5_r5">O que comi, ceia</label>
+          <textarea id="f_d5_r5" data-k="d5.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d5_sab">O que me sabotou hoje</label>
+          <textarea id="f_d5_sab" data-k="d5.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d5_des">Maiores desafios do dia</label>
+          <textarea id="f_d5_des" data-k="d5.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d5_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d5_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d5_sen" data-k="d5.sen" rows="3" aria-describedby="f_d5_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d5_pos">Pontos positivos do dia</label>
+          <textarea id="f_d5_pos" data-k="d5.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d5_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d5_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d5_bal" data-k="d5.bal" rows="3" aria-describedby="f_d5_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="4">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="6">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d6" aria-labelledby="tab-d6" hidden>
+    <h2>Dia 6</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d6_data">Data deste dia</label>
+          <input id="f_d6_data" data-k="d6.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d6_h0">Horário</label>
+            <input id="f_d6_h0" data-k="d6.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r0">O que comi, café da manhã</label>
+          <textarea id="f_d6_r0" data-k="d6.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d6_h1">Horário</label>
+            <input id="f_d6_h1" data-k="d6.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d6_r1" data-k="d6.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d6_h2">Horário</label>
+            <input id="f_d6_h2" data-k="d6.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r2">O que comi, almoço</label>
+          <textarea id="f_d6_r2" data-k="d6.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d6_h3">Horário</label>
+            <input id="f_d6_h3" data-k="d6.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d6_r3" data-k="d6.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d6_h4">Horário</label>
+            <input id="f_d6_h4" data-k="d6.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r4">O que comi, jantar</label>
+          <textarea id="f_d6_r4" data-k="d6.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d6_h5">Horário</label>
+            <input id="f_d6_h5" data-k="d6.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d6_r5">O que comi, ceia</label>
+          <textarea id="f_d6_r5" data-k="d6.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d6_sab">O que me sabotou hoje</label>
+          <textarea id="f_d6_sab" data-k="d6.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d6_des">Maiores desafios do dia</label>
+          <textarea id="f_d6_des" data-k="d6.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d6_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d6_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d6_sen" data-k="d6.sen" rows="3" aria-describedby="f_d6_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d6_pos">Pontos positivos do dia</label>
+          <textarea id="f_d6_pos" data-k="d6.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d6_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d6_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d6_bal" data-k="d6.bal" rows="3" aria-describedby="f_d6_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="5">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="7">Próximo dia</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-d7" aria-labelledby="tab-d7" hidden>
+    <h2>Dia 7</h2>
+    <div class="blk" style="padding-top:0;border:0;margin-top:0">
+      <div class="g2" style="max-width:260px">
+        <div class="fld">
+          <label for="f_d7_data">Data deste dia</label>
+          <input id="f_d7_data" data-k="d7.data" type="date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte A: o que eu comi</h2>
+      <p class="hint">Escreva o que comeu e o horário de cada refeição. Se pulou alguma, deixe em branco.</p>
+      <div class="meal">
+        <div class="mh">
+          <h4>Café da manhã</h4>
+          <div class="fld">
+            <label for="f_d7_h0">Horário</label>
+            <input id="f_d7_h0" data-k="d7.h0" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r0">O que comi, café da manhã</label>
+          <textarea id="f_d7_r0" data-k="d7.r0" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da manhã</h4>
+          <div class="fld">
+            <label for="f_d7_h1">Horário</label>
+            <input id="f_d7_h1" data-k="d7.h1" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r1">O que comi, lanche da manhã</label>
+          <textarea id="f_d7_r1" data-k="d7.r1" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Almoço</h4>
+          <div class="fld">
+            <label for="f_d7_h2">Horário</label>
+            <input id="f_d7_h2" data-k="d7.h2" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r2">O que comi, almoço</label>
+          <textarea id="f_d7_r2" data-k="d7.r2" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Lanche da tarde</h4>
+          <div class="fld">
+            <label for="f_d7_h3">Horário</label>
+            <input id="f_d7_h3" data-k="d7.h3" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r3">O que comi, lanche da tarde</label>
+          <textarea id="f_d7_r3" data-k="d7.r3" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Jantar</h4>
+          <div class="fld">
+            <label for="f_d7_h4">Horário</label>
+            <input id="f_d7_h4" data-k="d7.h4" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r4">O que comi, jantar</label>
+          <textarea id="f_d7_r4" data-k="d7.r4" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="mh">
+          <h4>Ceia</h4>
+          <div class="fld">
+            <label for="f_d7_h5">Horário</label>
+            <input id="f_d7_h5" data-k="d7.h5" type="time" autocomplete="off">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_d7_r5">O que comi, ceia</label>
+          <textarea id="f_d7_r5" data-k="d7.r5" rows="2"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="blk">
+      <h2>Parte B: o que eu senti</h2>
+      <div class="stack" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_d7_sab">O que me sabotou hoje</label>
+          <textarea id="f_d7_sab" data-k="d7.sab" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d7_des">Maiores desafios do dia</label>
+          <textarea id="f_d7_des" data-k="d7.des" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d7_sen">Que sentimentos tive</label>
+          <p class="hint" id="f_d7_sen_h"><span class="inlinelink">Se faltar palavra, <a href="#palavras">abra a Lista de Palavras do que Sinto</a>.</span></p>
+          <textarea id="f_d7_sen" data-k="d7.sen" rows="3" aria-describedby="f_d7_sen_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d7_pos">Pontos positivos do dia</label>
+          <textarea id="f_d7_pos" data-k="d7.pos" rows="3"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_d7_bal">Balanço final do dia, em 3 linhas</label>
+          <p class="hint" id="f_d7_bal_h">Escrever o balanço marca o dia como concluído.</p>
+          <textarea id="f_d7_bal" data-k="d7.bal" rows="3" aria-describedby="f_d7_bal_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="6">Dia anterior</button>
+      <button type="button" class="btn pri" data-act="day" data-d="fim">Ir para o fechamento</button>
+    </div>
+  </div>
+  <div class="day" role="tabpanel" id="day-dfim" aria-labelledby="tab-dfim" hidden>
+    <h2>Fechamento dos 7 dias</h2>
+    <p class="hint" id="fimaviso"></p>
+    <div class="stack" style="margin-top:12px">
+      <div class="fld">
+        <label for="f_dfim_padrao">Qual padrão você enxergou?</label>
+        <p class="hint" id="f_dfim_padrao_h">Releia os seus sete dias. O que se repete: horários, situações, sentimentos, pessoas?</p>
+        <textarea id="f_dfim_padrao" data-k="dfim.padrao" rows="6" aria-describedby="f_dfim_padrao_h"></textarea>
+      </div>
+      <div class="q hl" style="margin:0;padding:16px">
+        <div class="fld">
+          <label for="f_dfim_gatilho">Qual é o seu gatilho principal?</label>
+          <p class="hint" id="f_dfim_gatilho_h">Gatilho é a situação, o horário ou o sentimento que aparece antes de você comer sem fome.</p>
+          <textarea id="f_dfim_gatilho" data-k="dfim.gatilho" rows="4" aria-describedby="f_dfim_gatilho_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="daynav">
+      <button type="button" class="btn" data-act="day" data-d="7">Voltar ao dia 7</button><span></span>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="diario">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Identificar o seu gatilho principal.</p>
+    <p class="ms" data-ms data-done="Conquistado. Você identificou o seu gatilho principal." data-todo="Ainda a conquistar. Preencha o fechamento dos 7 dias."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="fim-parcial">Você concluiu {n} de 7 dias. Dá para fazer o fechamento agora, e revisar quando completar os 7.</template>
+<template data-msg="fim-completo">Você concluiu os 7 dias. Leia tudo com calma e responda.</template>
+<template data-msg="dia-0">em branco</template>
+<template data-msg="dia-1">em andamento</template>
+<template data-msg="dia-2">dia concluído</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('diario',function(K){
+'use strict';
+var $=K.$,$$=K.$$,val=K.val,S=K.S,touch=K.touch,growAll=K.growAll,msg=K.msg;
+function dayKeys(n){var k=['d'+n+'.data','d'+n+'.sab','d'+n+'.des','d'+n+'.sen','d'+n+'.pos','d'+n+'.bal'];for(var i=0;i<6;i++){k.push('d'+n+'.r'+i,'d'+n+'.h'+i)}return k}
+function dayStatus(n){
+  if(n==='fim')return (val('dfim.padrao')||val('dfim.gatilho'))?(val('dfim.gatilho')?2:1):0;
+  var ks=dayKeys(n),any=ks.some(function(k){return val(k)});
+  return val('d'+n+'.bal')?2:(any?1:0);
+}
+var diaAtual='1';
+function showDay(d){
+  d=String(d);diaAtual=d;S.meta.dia=d;
+  $$('.day').forEach(function(p){p.hidden=p.id!=='day-d'+d});
+  $$('.dtab').forEach(function(b){var on=b.getAttribute('data-d')===d;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+  growAll($('#s-diario'));
+  if(d==='fim'){var done=0;for(var n=1;n<=7;n++)if(dayStatus(n)===2)done++;$('#fimaviso').textContent=done<7?msg('fim-parcial',{n:done}):msg('fim-completo')}
+}
+function updateDays(){
+  $$('.dtab').forEach(function(b){var d=b.getAttribute('data-d'),st=dayStatus(d==='fim'?'fim':+d);b.setAttribute('data-st',st);var s=$('[data-dtxt]',b);s.textContent=', '+msg('dia-'+st)})
+}
+document.addEventListener('keydown',function(e){
+  var tb=e.target.closest&&e.target.closest('[role=tablist]');
+  if(tb&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){
+    var tabs=$$('[role=tab]',tb),i=tabs.indexOf(e.target);if(i<0)return;
+    var n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];showDay(n.getAttribute('data-d'));n.focus();e.preventDefault();
+  }
+});
+return {
+dyn:updateDays,
+iniciar:function(){showDay(S.meta.dia||'1')},
+aoAbrirFicha:function(){showDay(S.meta.dia||'1')},
+acao:function(act,b){
+  if(act==='day'){showDay(b.getAttribute('data-d'));var tb=$('.dtabs');if(tb&&b.closest('.daynav')){window.scrollTo(0,tb.getBoundingClientRect().top+window.pageYOffset-80)}touch()}
+}
+};
+});
+</script>
+</body></html>

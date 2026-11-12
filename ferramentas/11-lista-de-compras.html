@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lista de Compras do Essencial · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="compras">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 11 · LISTA DE COMPRAS DO ESSENCIAL
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-compras" aria-labelledby="h-compras">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 11 · Fase 3 · Organizar a vida real
+  </div>
+  <h1 id="h-compras" tabindex="-1">Lista de Compras do Essencial</h1>
+  <p class="lead">Deixar a casa pronta para a semana. Compre a partir do que você planejou, e não do que bate o olho no mercado.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_cp_sem">Semana de</label>
+        <input id="f_cp_sem" data-k="cp.sem" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_cp_local">Mercado ou feira</label>
+        <input id="f_cp_local" data-k="cp.local" type="text" autocomplete="off">
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <div class="cbw">
+        <input type="checkbox" class="sr" id="f_cp_plan" data-k="cp.plan">
+        <label class="cbl" for="f_cp_plan"><span>Fiz esta lista olhando o meu <a href="#planejamento">Planejamento das Refeições</a></span></label>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>O essencial da semana</h2>
+    <p class="hint">Liste o que você precisa para cumprir o que planejou. Quando comprar, marque o quadrado.</p>
+    <div class="cgrid" style="margin-top:12px">
+      <div class="wg">
+        <h3>Proteína</h3>
+        <div class="cgh" aria-hidden="true">
+          <span></span><span>Item</span><span>Qtd. na semana</span>
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_0_c" data-k="cp.prot.0.c">
+          <label class="cbl" for="f_cp_prot_0_c"><span class="sr">Comprei: Proteína, item 1</span></label></span>
+          <input type="text" id="f_cp_prot_0_n" data-k="cp.prot.0.n" autocomplete="off" aria-label="Proteína, item 1">
+          <input type="text" id="f_cp_prot_0_q" data-k="cp.prot.0.q" autocomplete="off" aria-label="Proteína, quantidade do item 1" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_1_c" data-k="cp.prot.1.c">
+          <label class="cbl" for="f_cp_prot_1_c"><span class="sr">Comprei: Proteína, item 2</span></label></span>
+          <input type="text" id="f_cp_prot_1_n" data-k="cp.prot.1.n" autocomplete="off" aria-label="Proteína, item 2">
+          <input type="text" id="f_cp_prot_1_q" data-k="cp.prot.1.q" autocomplete="off" aria-label="Proteína, quantidade do item 2" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_2_c" data-k="cp.prot.2.c">
+          <label class="cbl" for="f_cp_prot_2_c"><span class="sr">Comprei: Proteína, item 3</span></label></span>
+          <input type="text" id="f_cp_prot_2_n" data-k="cp.prot.2.n" autocomplete="off" aria-label="Proteína, item 3">
+          <input type="text" id="f_cp_prot_2_q" data-k="cp.prot.2.q" autocomplete="off" aria-label="Proteína, quantidade do item 3" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_3_c" data-k="cp.prot.3.c">
+          <label class="cbl" for="f_cp_prot_3_c"><span class="sr">Comprei: Proteína, item 4</span></label></span>
+          <input type="text" id="f_cp_prot_3_n" data-k="cp.prot.3.n" autocomplete="off" aria-label="Proteína, item 4">
+          <input type="text" id="f_cp_prot_3_q" data-k="cp.prot.3.q" autocomplete="off" aria-label="Proteína, quantidade do item 4" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_4_c" data-k="cp.prot.4.c">
+          <label class="cbl" for="f_cp_prot_4_c"><span class="sr">Comprei: Proteína, item 5</span></label></span>
+          <input type="text" id="f_cp_prot_4_n" data-k="cp.prot.4.n" autocomplete="off" aria-label="Proteína, item 5">
+          <input type="text" id="f_cp_prot_4_q" data-k="cp.prot.4.q" autocomplete="off" aria-label="Proteína, quantidade do item 5" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_prot_5_c" data-k="cp.prot.5.c">
+          <label class="cbl" for="f_cp_prot_5_c"><span class="sr">Comprei: Proteína, item 6</span></label></span>
+          <input type="text" id="f_cp_prot_5_n" data-k="cp.prot.5.n" autocomplete="off" aria-label="Proteína, item 6">
+          <input type="text" id="f_cp_prot_5_q" data-k="cp.prot.5.q" autocomplete="off" aria-label="Proteína, quantidade do item 6" placeholder="qtd.">
+        </div>
+      </div>
+      <div class="wg">
+        <h3>Carboidrato</h3>
+        <div class="cgh" aria-hidden="true">
+          <span></span><span>Item</span><span>Qtd. na semana</span>
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_0_c" data-k="cp.carb.0.c">
+          <label class="cbl" for="f_cp_carb_0_c"><span class="sr">Comprei: Carboidrato, item 1</span></label></span>
+          <input type="text" id="f_cp_carb_0_n" data-k="cp.carb.0.n" autocomplete="off" aria-label="Carboidrato, item 1">
+          <input type="text" id="f_cp_carb_0_q" data-k="cp.carb.0.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 1" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_1_c" data-k="cp.carb.1.c">
+          <label class="cbl" for="f_cp_carb_1_c"><span class="sr">Comprei: Carboidrato, item 2</span></label></span>
+          <input type="text" id="f_cp_carb_1_n" data-k="cp.carb.1.n" autocomplete="off" aria-label="Carboidrato, item 2">
+          <input type="text" id="f_cp_carb_1_q" data-k="cp.carb.1.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 2" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_2_c" data-k="cp.carb.2.c">
+          <label class="cbl" for="f_cp_carb_2_c"><span class="sr">Comprei: Carboidrato, item 3</span></label></span>
+          <input type="text" id="f_cp_carb_2_n" data-k="cp.carb.2.n" autocomplete="off" aria-label="Carboidrato, item 3">
+          <input type="text" id="f_cp_carb_2_q" data-k="cp.carb.2.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 3" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_3_c" data-k="cp.carb.3.c">
+          <label class="cbl" for="f_cp_carb_3_c"><span class="sr">Comprei: Carboidrato, item 4</span></label></span>
+          <input type="text" id="f_cp_carb_3_n" data-k="cp.carb.3.n" autocomplete="off" aria-label="Carboidrato, item 4">
+          <input type="text" id="f_cp_carb_3_q" data-k="cp.carb.3.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 4" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_4_c" data-k="cp.carb.4.c">
+          <label class="cbl" for="f_cp_carb_4_c"><span class="sr">Comprei: Carboidrato, item 5</span></label></span>
+          <input type="text" id="f_cp_carb_4_n" data-k="cp.carb.4.n" autocomplete="off" aria-label="Carboidrato, item 5">
+          <input type="text" id="f_cp_carb_4_q" data-k="cp.carb.4.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 5" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_carb_5_c" data-k="cp.carb.5.c">
+          <label class="cbl" for="f_cp_carb_5_c"><span class="sr">Comprei: Carboidrato, item 6</span></label></span>
+          <input type="text" id="f_cp_carb_5_n" data-k="cp.carb.5.n" autocomplete="off" aria-label="Carboidrato, item 6">
+          <input type="text" id="f_cp_carb_5_q" data-k="cp.carb.5.q" autocomplete="off" aria-label="Carboidrato, quantidade do item 6" placeholder="qtd.">
+        </div>
+      </div>
+      <div class="wg">
+        <h3>Legumes e verduras</h3>
+        <div class="cgh" aria-hidden="true">
+          <span></span><span>Item</span><span>Qtd. na semana</span>
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_0_c" data-k="cp.leg.0.c">
+          <label class="cbl" for="f_cp_leg_0_c"><span class="sr">Comprei: Legumes e verduras, item 1</span></label></span>
+          <input type="text" id="f_cp_leg_0_n" data-k="cp.leg.0.n" autocomplete="off" aria-label="Legumes e verduras, item 1">
+          <input type="text" id="f_cp_leg_0_q" data-k="cp.leg.0.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 1" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_1_c" data-k="cp.leg.1.c">
+          <label class="cbl" for="f_cp_leg_1_c"><span class="sr">Comprei: Legumes e verduras, item 2</span></label></span>
+          <input type="text" id="f_cp_leg_1_n" data-k="cp.leg.1.n" autocomplete="off" aria-label="Legumes e verduras, item 2">
+          <input type="text" id="f_cp_leg_1_q" data-k="cp.leg.1.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 2" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_2_c" data-k="cp.leg.2.c">
+          <label class="cbl" for="f_cp_leg_2_c"><span class="sr">Comprei: Legumes e verduras, item 3</span></label></span>
+          <input type="text" id="f_cp_leg_2_n" data-k="cp.leg.2.n" autocomplete="off" aria-label="Legumes e verduras, item 3">
+          <input type="text" id="f_cp_leg_2_q" data-k="cp.leg.2.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 3" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_3_c" data-k="cp.leg.3.c">
+          <label class="cbl" for="f_cp_leg_3_c"><span class="sr">Comprei: Legumes e verduras, item 4</span></label></span>
+          <input type="text" id="f_cp_leg_3_n" data-k="cp.leg.3.n" autocomplete="off" aria-label="Legumes e verduras, item 4">
+          <input type="text" id="f_cp_leg_3_q" data-k="cp.leg.3.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 4" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_4_c" data-k="cp.leg.4.c">
+          <label class="cbl" for="f_cp_leg_4_c"><span class="sr">Comprei: Legumes e verduras, item 5</span></label></span>
+          <input type="text" id="f_cp_leg_4_n" data-k="cp.leg.4.n" autocomplete="off" aria-label="Legumes e verduras, item 5">
+          <input type="text" id="f_cp_leg_4_q" data-k="cp.leg.4.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 5" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_leg_5_c" data-k="cp.leg.5.c">
+          <label class="cbl" for="f_cp_leg_5_c"><span class="sr">Comprei: Legumes e verduras, item 6</span></label></span>
+          <input type="text" id="f_cp_leg_5_n" data-k="cp.leg.5.n" autocomplete="off" aria-label="Legumes e verduras, item 6">
+          <input type="text" id="f_cp_leg_5_q" data-k="cp.leg.5.q" autocomplete="off" aria-label="Legumes e verduras, quantidade do item 6" placeholder="qtd.">
+        </div>
+      </div>
+      <div class="wg">
+        <h3>Gordura boa</h3>
+        <div class="cgh" aria-hidden="true">
+          <span></span><span>Item</span><span>Qtd. na semana</span>
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_0_c" data-k="cp.gord.0.c">
+          <label class="cbl" for="f_cp_gord_0_c"><span class="sr">Comprei: Gordura boa, item 1</span></label></span>
+          <input type="text" id="f_cp_gord_0_n" data-k="cp.gord.0.n" autocomplete="off" aria-label="Gordura boa, item 1">
+          <input type="text" id="f_cp_gord_0_q" data-k="cp.gord.0.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 1" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_1_c" data-k="cp.gord.1.c">
+          <label class="cbl" for="f_cp_gord_1_c"><span class="sr">Comprei: Gordura boa, item 2</span></label></span>
+          <input type="text" id="f_cp_gord_1_n" data-k="cp.gord.1.n" autocomplete="off" aria-label="Gordura boa, item 2">
+          <input type="text" id="f_cp_gord_1_q" data-k="cp.gord.1.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 2" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_2_c" data-k="cp.gord.2.c">
+          <label class="cbl" for="f_cp_gord_2_c"><span class="sr">Comprei: Gordura boa, item 3</span></label></span>
+          <input type="text" id="f_cp_gord_2_n" data-k="cp.gord.2.n" autocomplete="off" aria-label="Gordura boa, item 3">
+          <input type="text" id="f_cp_gord_2_q" data-k="cp.gord.2.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 3" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_3_c" data-k="cp.gord.3.c">
+          <label class="cbl" for="f_cp_gord_3_c"><span class="sr">Comprei: Gordura boa, item 4</span></label></span>
+          <input type="text" id="f_cp_gord_3_n" data-k="cp.gord.3.n" autocomplete="off" aria-label="Gordura boa, item 4">
+          <input type="text" id="f_cp_gord_3_q" data-k="cp.gord.3.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 4" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_4_c" data-k="cp.gord.4.c">
+          <label class="cbl" for="f_cp_gord_4_c"><span class="sr">Comprei: Gordura boa, item 5</span></label></span>
+          <input type="text" id="f_cp_gord_4_n" data-k="cp.gord.4.n" autocomplete="off" aria-label="Gordura boa, item 5">
+          <input type="text" id="f_cp_gord_4_q" data-k="cp.gord.4.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 5" placeholder="qtd.">
+        </div>
+        <div class="crow">
+          <span class="cbs">
+          <input type="checkbox" class="sr" id="f_cp_gord_5_c" data-k="cp.gord.5.c">
+          <label class="cbl" for="f_cp_gord_5_c"><span class="sr">Comprei: Gordura boa, item 6</span></label></span>
+          <input type="text" id="f_cp_gord_5_n" data-k="cp.gord.5.n" autocomplete="off" aria-label="Gordura boa, item 6">
+          <input type="text" id="f_cp_gord_5_q" data-k="cp.gord.5.q" autocomplete="off" aria-label="Gordura boa, quantidade do item 6" placeholder="qtd.">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="tray">
+      <h3>Itens de emergência</h3>
+      <p class="hint" style="margin-top:-4px">Para os dias em que a semana sai do plano. Combine com o seu <a href="#coringa">alimento coringa</a>.</p>
+      <div class="crow em">
+        <span class="cbs">
+        <input type="checkbox" class="sr" id="f_cp_em_0_c" data-k="cp.em.0.c">
+        <label class="cbl" for="f_cp_em_0_c"><span class="sr">Comprei: item de emergência 1</span></label></span>
+        <input type="text" id="f_cp_em_0_n" data-k="cp.em.0.n" autocomplete="off" aria-label="Item de emergência 1">
+      </div>
+      <div class="crow em">
+        <span class="cbs">
+        <input type="checkbox" class="sr" id="f_cp_em_1_c" data-k="cp.em.1.c">
+        <label class="cbl" for="f_cp_em_1_c"><span class="sr">Comprei: item de emergência 2</span></label></span>
+        <input type="text" id="f_cp_em_1_n" data-k="cp.em.1.n" autocomplete="off" aria-label="Item de emergência 2">
+      </div>
+      <div class="crow em">
+        <span class="cbs">
+        <input type="checkbox" class="sr" id="f_cp_em_2_c" data-k="cp.em.2.c">
+        <label class="cbl" for="f_cp_em_2_c"><span class="sr">Comprei: item de emergência 3</span></label></span>
+        <input type="text" id="f_cp_em_2_n" data-k="cp.em.2.n" autocomplete="off" aria-label="Item de emergência 3">
+      </div>
+      <div class="crow em">
+        <span class="cbs">
+        <input type="checkbox" class="sr" id="f_cp_em_3_c" data-k="cp.em.3.c">
+        <label class="cbl" for="f_cp_em_3_c"><span class="sr">Comprei: item de emergência 4</span></label></span>
+        <input type="text" id="f_cp_em_3_n" data-k="cp.em.3.n" autocomplete="off" aria-label="Item de emergência 4">
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="compras">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Fazer a primeira compra a partir do planejamento.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você fez a compra a partir do seu planejamento."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="compras" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-3">listar ao menos 3 itens</template>
+<template data-msg="falta-comprou">marcar o que você já comprou</template>
+<template data-msg="falta-plan">confirmar que fez a lista olhando o seu planejamento</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('compras',function(K){
+'use strict';
+var val=K.val,msg=K.msg;
+var CPG=['prot','carb','leg','gord'];
+return {
+falta:function(){var m=[],n=0,c=0;CPG.forEach(function(g){for(var i=0;i<6;i++){if(val('cp.'+g+'.'+i+'.n'))n++;if(val('cp.'+g+'.'+i+'.c'))c++}});if(n<3)m.push(msg('falta-3'));if(!c)m.push(msg('falta-comprou'));if(!val('cp.plan'))m.push(msg('falta-plan'));return m}
+};
+});
+</script>
+</body></html>

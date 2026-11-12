@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lista de Palavras do que Sinto · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+<style>
+/* Tons suaves por categoria, restritos a esta ferramenta. */
+#s-palavras .wg{background:var(--categoria-fundo);border-color:var(--categoria-borda);border-top:4px solid var(--categoria-cor)}
+#s-palavras .wg h3{color:var(--categoria-cor)}
+#s-palavras .wg .chip{background:#fffdf9;border-color:var(--categoria-borda)}
+#s-palavras .wg .chip:hover{background:var(--categoria-fundo);border-color:var(--categoria-cor)}
+#s-palavras .wg .chip[aria-pressed=true]{background:var(--categoria-cor);border-color:var(--categoria-cor);color:#fff}
+#s-palavras .wg .chip:focus-visible{outline-color:var(--categoria-cor)}
+#s-palavras .wg[aria-labelledby=wgh0]{--categoria-fundo:#f4e8dc;--categoria-borda:#d8bda4;--categoria-cor:#805a3e}
+#s-palavras .wg[aria-labelledby=wgh1]{--categoria-fundo:#f5e4dc;--categoria-borda:#dbb5a3;--categoria-cor:#92543f}
+#s-palavras .wg[aria-labelledby=wgh2]{--categoria-fundo:#e9ecdf;--categoria-borda:#c0c6a7;--categoria-cor:#626b46}
+#s-palavras .wg[aria-labelledby=wgh3]{--categoria-fundo:#eee7de;--categoria-borda:#c9b9a7;--categoria-cor:#75604d}
+#s-palavras .wg[aria-labelledby=wgh4]{--categoria-fundo:#e5ebea;--categoria-borda:#b0c1be;--categoria-cor:#526c68}
+#s-palavras .wg[aria-labelledby=wgh5]{--categoria-fundo:#f0dfda;--categoria-borda:#d3aaa0;--categoria-cor:#8b5147}
+#s-palavras .wg[aria-labelledby=wgh6]{--categoria-fundo:#eee8ee;--categoria-borda:#c7b6c6;--categoria-cor:#755d73}
+#s-palavras .wg[aria-labelledby=wgh7]{--categoria-fundo:#f2edda;--categoria-borda:#d2c397;--categoria-cor:#796735}
+#s-palavras .wg[aria-labelledby=wgh8]{--categoria-fundo:#e6e8ee;--categoria-borda:#b8bdce;--categoria-cor:#5e6782}
+#s-palavras .wg[aria-labelledby=wgh-p]{--categoria-fundo:#e4ecdf;--categoria-borda:#b5c8a8;--categoria-cor:#576f49}
+</style>
+</head>
+<body data-raiz="../" data-ferramenta="palavras">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 06 · LISTA DE PALAVRAS DO QUE SINTO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-palavras" aria-labelledby="h-palavras">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 06 · Fase 2 · Enxergar o padrão
+  </div>
+  <h1 id="h-palavras" tabindex="-1">Lista de Palavras do que Sinto</h1>
+  <p class="lead">Dar vocabulário para a emoção antes de comer. Antes de abrir a geladeira, pare e escolha as palavras que descrevem o que você sente agora.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk">
+    <h2>Escolha as palavras</h2>
+    <p class="hint">Toque nas palavras que combinam com o que você sente agora. Escolha quantas quiser. Toque de novo para tirar.</p>
+    <div class="wgrid" style="margin-top:12px">
+      <div class="wg" role="group" aria-labelledby="wgh0">
+        <h3 id="wgh0">Fome física</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="estômago roncando">estômago roncando</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vazio no estômago">vazio no estômago</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="fraqueza">fraqueza</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="tontura">tontura</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="dor de cabeça">dor de cabeça</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="falta de energia">falta de energia</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="mãos tremendo">mãos tremendo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="mal-estar de fome">mal-estar de fome</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh1">
+        <h3 id="wgh1">Vontade</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="cheiro bom">cheiro bom</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vontade de doce">vontade de doce</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vontade de salgado">vontade de salgado</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vontade de algo crocante">vontade de algo crocante</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="lembrança de um sabor">lembrança de um sabor</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vi alguém comendo">vi alguém comendo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="estava ali na minha frente">estava ali na minha frente</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="só um pouquinho">só um pouquinho</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh2">
+        <h3 id="wgh2">Ansiedade</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="aperto no peito">aperto no peito</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="inquietação">inquietação</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="pressa">pressa</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="preocupação">preocupação</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="nervosismo">nervosismo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="cabeça acelerada">cabeça acelerada</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="medo de errar">medo de errar</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="agitação">agitação</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh3">
+        <h3 id="wgh3">Cansaço</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="exaustão">exaustão</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sem energia">sem energia</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sono">sono</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="corpo pesado">corpo pesado</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="mente cansada">mente cansada</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sobrecarga">sobrecarga</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="esgotamento">esgotamento</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="preguiça">preguiça</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh4">
+        <h3 id="wgh4">Tristeza</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vazio">vazio</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="desânimo">desânimo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="saudade">saudade</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="decepção">decepção</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="desamparo">desamparo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vontade de chorar">vontade de chorar</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="culpa">culpa</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vergonha">vergonha</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh5">
+        <h3 id="wgh5">Raiva</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="irritação">irritação</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="frustração">frustração</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="injustiça">injustiça</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="mágoa">mágoa</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="impaciência">impaciência</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="revolta">revolta</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="ressentimento">ressentimento</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="vontade de explodir">vontade de explodir</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh6">
+        <h3 id="wgh6">Tédio</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sem ter o que fazer">sem ter o que fazer</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="monotonia">monotonia</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="adiando uma tarefa">adiando uma tarefa</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="falta de estímulo">falta de estímulo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="esperando algo passar">esperando algo passar</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="tempo livre demais">tempo livre demais</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="procurando distração">procurando distração</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh7">
+        <h3 id="wgh7">Hábito</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="horário de sempre">horário de sempre</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="TV ligada">TV ligada</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="celular na mão">celular na mão</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="café com algo doce">café com algo doce</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="passei pela cozinha">passei pela cozinha</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="depois do jantar">depois do jantar</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sempre faço isso">sempre faço isso</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="comer em pé">comer em pé</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh8">
+        <h3 id="wgh8">Solidão</h3>
+        <div class="chips">
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sozinha em casa">sozinha em casa</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="falta de companhia">falta de companhia</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="sem ninguém para conversar">sem ninguém para conversar</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="me sentindo invisível">me sentindo invisível</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="falta de colo">falta de colo</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="saudade de alguém">saudade de alguém</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="silêncio demais">silêncio demais</button>
+          <button type="button" class="chip" aria-pressed="false" data-act="word" data-w="me sentindo deixada de lado">me sentindo deixada de lado</button>
+        </div>
+      </div>
+      <div class="wg" role="group" aria-labelledby="wgh-p">
+        <h3 id="wgh-p">Minhas palavras</h3>
+        <div class="chips" id="customChips">
+        </div>
+        <p class="empty" id="customEmpty">As palavras que você acrescentar ficam salvas aqui.</p>
+        <div class="addrow">
+          <div class="fld">
+            <label for="w-add">Acrescentar uma palavra minha</label>
+            <input type="text" id="w-add" maxlength="40" autocomplete="off">
+          </div>
+          <button type="button" class="btn" data-act="w-add">Adicionar</button>
+        </div>
+        <p class="msg" id="wmsg2" role="status"></p>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="tray">
+      <h3 id="trayh">O que eu senti hoje antes de comer</h3>
+      <div class="chips" id="tray" aria-live="polite" aria-labelledby="trayh">
+      </div>
+      <div style="margin-top:14px">
+        <div class="fld">
+          <label for="f_words_texto">Com as minhas palavras (opcional)</label>
+          <textarea id="f_words_texto" data-k="words.texto" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="btnrow">
+        <button type="button" class="btn pri" data-act="w-save">Guardar este registro</button>
+        <button type="button" class="btn" data-act="w-clear">Limpar a seleção</button>
+      </div>
+      <p class="msg" id="wmsg" role="status"></p>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Meus registros</h2>
+    <p class="hint" id="whistinfo"></p>
+    <ul class="hist" id="whist">
+    </ul>
+  </div>
+</div>
+<aside class="marco" data-marco="palavras">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Nomear a emoção antes de abrir a geladeira.</p>
+    <p class="ms" data-ms data-done="Conquistado. Você nomeou o que sentia." data-todo="Ainda a conquistar. Escolha as palavras e guarde o registro."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="hist-vazio">Nenhum registro guardado ainda.</template>
+<template data-msg="hist-muitos">Os 8 registros mais recentes, de {n}.</template>
+<template data-msg="hist-poucos">Seus registros, do mais recente ao mais antigo.</template>
+<template data-msg="w-escreva">Escreva a palavra antes de adicionar.</template>
+<template data-msg="w-ja-existe">Essa palavra já existe na lista. Eu a selecionei para você.</template>
+<template data-msg="w-adicionada">Palavra adicionada e selecionada.</template>
+<template data-msg="w-limpa">Seleção limpa.</template>
+<template data-msg="w-escolha">Escolha ao menos uma palavra antes de guardar.</template>
+<template data-msg="w-guardado">Registro guardado. Você nomeou o que sentia.</template>
+<template data-msg="w-apagar">Apagar este registro?</template>
+<template data-row="chip-sel">
+<button type="button" class="chip" aria-pressed="true" data-act="word" data-w="{w}">{w}</button>
+</template>
+<template data-row="chip-custom">
+<span class="cwrap"><button type="button" class="chip" aria-pressed="{on}" data-act="word" data-w="{w}">{w}</button><button type="button" class="cdel" data-act="w-del" data-w="{w}" aria-label="Remover a palavra {w}">remover</button></span>
+</template>
+<template data-row="tray-vazio">
+<span class="empty">Toque nas palavras acima. Elas aparecem aqui.</span>
+</template>
+<template data-row="hist-texto">
+<div class="hs">{t}</div>
+</template>
+<template data-row="hist">
+<li><div class="hb"><div class="hd">{cab}</div><div class="hm">{palavras}</div>{!texto}</div><button type="button" class="del" data-act="w-logdel" data-id="{id}" aria-label="Apagar o registro de {dataf}">Apagar</button></li>
+</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('palavras',function(K){
+'use strict';
+var $=K.$,$$=K.$$,val=K.val,S=K.S,touch=K.touch,today=K.today,nowHM=K.nowHM,fmt=K.fmt,uid=K.uid,applyFields=K.applyFields,msg=K.msg,row=K.row;
+/* as palavras prontas vêm dos botões que estão no HTML */
+function allWords(){return $$('.wg .chips:not(#customChips) [data-act=word]').map(function(b){return b.getAttribute('data-w')}).concat(S.words.custom)}
+function renderWords(){
+  $$('[data-act=word]').forEach(function(b){b.setAttribute('aria-pressed',S.words.sel.indexOf(b.getAttribute('data-w'))>-1)});
+  var cc=$('#customChips');
+  cc.innerHTML=S.words.custom.map(function(w){return row('chip-custom',{w:w,on:S.words.sel.indexOf(w)>-1})}).join('');
+  $('#customEmpty').hidden=S.words.custom.length>0;
+  var tr=$('#tray');
+  tr.innerHTML=S.words.sel.length?S.words.sel.map(function(w){return row('chip-sel',{w:w})}).join(''):row('tray-vazio');
+  var log=S.words.log.slice().reverse().slice(0,8);
+  $('#whistinfo').textContent=S.words.log.length?(S.words.log.length>8?msg('hist-muitos',{n:S.words.log.length}):msg('hist-poucos')):msg('hist-vazio');
+  $('#whist').innerHTML=log.map(function(e){return row('hist',{cab:fmt(e.d)+(e.h?', '+e.h:''),palavras:e.w.length?e.w.join(', '):'',texto:e.t?row('hist-texto',{t:e.t}):'',id:e.id,dataf:fmt(e.d)})}).join('');
+}
+function wordAct(act,b){
+  var w=b.getAttribute('data-w'),i,m=$('#wmsg');
+  if(act==='word'){i=S.words.sel.indexOf(w);if(i>-1)S.words.sel.splice(i,1);else S.words.sel.push(w);m.textContent='';renderWords();touch()}
+  else if(act==='w-add'){
+    var inp=$('#w-add'),v=inp.value.trim().replace(/\s+/g,' ');if(!v){$('#wmsg2').textContent=msg('w-escreva');inp.focus();return}
+    var ex=allWords().filter(function(x){return x.toLowerCase()===v.toLowerCase()})[0];
+    if(ex){if(S.words.sel.indexOf(ex)<0)S.words.sel.push(ex);$('#wmsg2').textContent=msg('w-ja-existe')}
+    else{S.words.custom.push(v);S.words.sel.push(v);$('#wmsg2').textContent=msg('w-adicionada')}
+    inp.value='';renderWords();touch();inp.focus();
+  }
+  else if(act==='w-del'){S.words.custom=S.words.custom.filter(function(x){return x!==w});S.words.sel=S.words.sel.filter(function(x){return x!==w});renderWords();touch()}
+  else if(act==='w-clear'){S.words.sel=[];m.textContent=msg('w-limpa');renderWords();touch()}
+  else if(act==='w-save'){
+    if(!S.words.sel.length&&!val('words.texto')){m.textContent=msg('w-escolha');return}
+    S.words.log.push({id:uid(),d:today(),h:nowHM(),w:S.words.sel.slice(),t:val('words.texto')});
+    S.words.sel=[];S.f['words.texto']='';applyFields();renderWords();touch();m.textContent=msg('w-guardado');
+  }
+  else if(act==='w-logdel'){if(confirm(msg('w-apagar'))){S.words.log=S.words.log.filter(function(e){return e.id!==b.getAttribute('data-id')});renderWords();touch()}}
+}
+document.addEventListener('keydown',function(e){
+  if(e.key==='Enter'&&e.target.id==='w-add'){e.preventDefault();wordAct('w-add',e.target)}
+});
+return {
+iniciar:renderWords,
+aoAbrirFicha:renderWords,
+acao:wordAct,
+coletaExtra:function(out,add,dataHora){
+  if(S.words.log.length){out.push('','[Meus registros de palavras]');S.words.log.forEach(function(e){add(dataHora(e)+': '+e.w.join(', ')+(e.t?'. '+e.t:''))})}
+  if(S.words.sel.length){out.push('','[Palavras escolhidas agora, ainda sem guardar]');add(S.words.sel.join(', '))}
+  if(S.words.custom.length){out.push('','[Palavras que eu acrescentei]');add(S.words.custom.join(', '))}
+}
+};
+});
+</script>
+</body></html>

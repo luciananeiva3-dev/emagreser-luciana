@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mapa da Semana com Âncoras · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="mapa">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 10 · MAPA DA SEMANA COM ÂNCORAS
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-mapa" aria-labelledby="h-mapa">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 10 · Fase 3 · Organizar a vida real
+  </div>
+  <h1 id="h-mapa" tabindex="-1">Mapa da Semana com Âncoras</h1>
+  <p class="lead">Encaixar o processo na rotina que você já tem, em vez de criar tempo que não existe.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="rule">
+  <b>Como funciona a âncora</b>
+  <p>Âncora é algo que já acontece todo dia, como o café ou o banho. O hábito novo vem logo depois dela: “depois que eu tomo o café, eu bebo um copo de água”.</p>
+</div>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <h2>Meu mapa</h2>
+    <p class="hint">Primeiro marque os compromissos fixos da sua semana: trabalho, aula, consulta. Depois, em cada bloco, prenda um hábito novo ao que já acontece. Não precisa preencher todos os blocos.</p>
+    <p class="hint" id="mp-count" role="status" style="font-weight:600;color:var(--ink)"></p>
+  </div>
+  <div style="margin-top:6px">
+    <div class="mrow">
+      <h3>Segunda</h3>
+      <div class="mcell" data-mc="mp.0.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_0_0_f" data-k="mp.0.0.f">
+          <label class="cbl" for="f_mp_0_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_0_a"><span class="sr">Segunda, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_0_0_a" data-k="mp.0.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_0_h"><span class="sr">Segunda, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_0_0_h" data-k="mp.0.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.0.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_0_1_f" data-k="mp.0.1.f">
+          <label class="cbl" for="f_mp_0_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_1_a"><span class="sr">Segunda, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_0_1_a" data-k="mp.0.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_1_h"><span class="sr">Segunda, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_0_1_h" data-k="mp.0.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.0.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_0_2_f" data-k="mp.0.2.f">
+          <label class="cbl" for="f_mp_0_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_2_a"><span class="sr">Segunda, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_0_2_a" data-k="mp.0.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_0_2_h"><span class="sr">Segunda, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_0_2_h" data-k="mp.0.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Terça</h3>
+      <div class="mcell" data-mc="mp.1.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_1_0_f" data-k="mp.1.0.f">
+          <label class="cbl" for="f_mp_1_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_0_a"><span class="sr">Terça, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_1_0_a" data-k="mp.1.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_0_h"><span class="sr">Terça, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_1_0_h" data-k="mp.1.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.1.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_1_1_f" data-k="mp.1.1.f">
+          <label class="cbl" for="f_mp_1_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_1_a"><span class="sr">Terça, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_1_1_a" data-k="mp.1.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_1_h"><span class="sr">Terça, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_1_1_h" data-k="mp.1.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.1.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_1_2_f" data-k="mp.1.2.f">
+          <label class="cbl" for="f_mp_1_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_2_a"><span class="sr">Terça, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_1_2_a" data-k="mp.1.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_1_2_h"><span class="sr">Terça, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_1_2_h" data-k="mp.1.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Quarta</h3>
+      <div class="mcell" data-mc="mp.2.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_2_0_f" data-k="mp.2.0.f">
+          <label class="cbl" for="f_mp_2_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_0_a"><span class="sr">Quarta, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_2_0_a" data-k="mp.2.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_0_h"><span class="sr">Quarta, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_2_0_h" data-k="mp.2.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.2.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_2_1_f" data-k="mp.2.1.f">
+          <label class="cbl" for="f_mp_2_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_1_a"><span class="sr">Quarta, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_2_1_a" data-k="mp.2.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_1_h"><span class="sr">Quarta, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_2_1_h" data-k="mp.2.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.2.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_2_2_f" data-k="mp.2.2.f">
+          <label class="cbl" for="f_mp_2_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_2_a"><span class="sr">Quarta, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_2_2_a" data-k="mp.2.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_2_2_h"><span class="sr">Quarta, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_2_2_h" data-k="mp.2.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Quinta</h3>
+      <div class="mcell" data-mc="mp.3.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_3_0_f" data-k="mp.3.0.f">
+          <label class="cbl" for="f_mp_3_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_0_a"><span class="sr">Quinta, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_3_0_a" data-k="mp.3.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_0_h"><span class="sr">Quinta, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_3_0_h" data-k="mp.3.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.3.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_3_1_f" data-k="mp.3.1.f">
+          <label class="cbl" for="f_mp_3_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_1_a"><span class="sr">Quinta, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_3_1_a" data-k="mp.3.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_1_h"><span class="sr">Quinta, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_3_1_h" data-k="mp.3.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.3.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_3_2_f" data-k="mp.3.2.f">
+          <label class="cbl" for="f_mp_3_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_2_a"><span class="sr">Quinta, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_3_2_a" data-k="mp.3.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_3_2_h"><span class="sr">Quinta, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_3_2_h" data-k="mp.3.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Sexta</h3>
+      <div class="mcell" data-mc="mp.4.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_4_0_f" data-k="mp.4.0.f">
+          <label class="cbl" for="f_mp_4_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_0_a"><span class="sr">Sexta, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_4_0_a" data-k="mp.4.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_0_h"><span class="sr">Sexta, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_4_0_h" data-k="mp.4.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.4.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_4_1_f" data-k="mp.4.1.f">
+          <label class="cbl" for="f_mp_4_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_1_a"><span class="sr">Sexta, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_4_1_a" data-k="mp.4.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_1_h"><span class="sr">Sexta, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_4_1_h" data-k="mp.4.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.4.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_4_2_f" data-k="mp.4.2.f">
+          <label class="cbl" for="f_mp_4_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_2_a"><span class="sr">Sexta, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_4_2_a" data-k="mp.4.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_4_2_h"><span class="sr">Sexta, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_4_2_h" data-k="mp.4.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Sábado</h3>
+      <div class="mcell" data-mc="mp.5.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_5_0_f" data-k="mp.5.0.f">
+          <label class="cbl" for="f_mp_5_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_0_a"><span class="sr">Sábado, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_5_0_a" data-k="mp.5.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_0_h"><span class="sr">Sábado, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_5_0_h" data-k="mp.5.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.5.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_5_1_f" data-k="mp.5.1.f">
+          <label class="cbl" for="f_mp_5_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_1_a"><span class="sr">Sábado, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_5_1_a" data-k="mp.5.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_1_h"><span class="sr">Sábado, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_5_1_h" data-k="mp.5.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.5.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_5_2_f" data-k="mp.5.2.f">
+          <label class="cbl" for="f_mp_5_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_2_a"><span class="sr">Sábado, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_5_2_a" data-k="mp.5.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_5_2_h"><span class="sr">Sábado, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_5_2_h" data-k="mp.5.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="mrow">
+      <h3>Domingo</h3>
+      <div class="mcell" data-mc="mp.6.0">
+        <div class="mph">
+          Manhã
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_6_0_f" data-k="mp.6.0.f">
+          <label class="cbl" for="f_mp_6_0_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_0_a"><span class="sr">Domingo, manhã. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_6_0_a" data-k="mp.6.0.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_0_h"><span class="sr">Domingo, manhã. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_6_0_h" data-k="mp.6.0.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.6.1">
+        <div class="mph">
+          Tarde
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_6_1_f" data-k="mp.6.1.f">
+          <label class="cbl" for="f_mp_6_1_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_1_a"><span class="sr">Domingo, tarde. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_6_1_a" data-k="mp.6.1.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_1_h"><span class="sr">Domingo, tarde. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_6_1_h" data-k="mp.6.1.h" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="mcell" data-mc="mp.6.2">
+        <div class="mph">
+          Noite
+        </div>
+        <div class="cbw">
+          <input type="checkbox" class="sr" id="f_mp_6_2_f" data-k="mp.6.2.f">
+          <label class="cbl" for="f_mp_6_2_f"><span>Compromisso fixo</span></label>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_2_a"><span class="sr">Domingo, noite. </span>Depois que eu…</label>
+          <textarea class="ln" id="f_mp_6_2_a" data-k="mp.6.2.a" rows="1"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_mp_6_2_h"><span class="sr">Domingo, noite. </span>…eu vou</label>
+          <textarea class="ln" id="f_mp_6_2_h" data-k="mp.6.2.h" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="mapa">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Prender um hábito novo a uma âncora que já existe.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você prendeu um hábito novo a uma âncora que já existe."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="mapa" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta">preencher um bloco completo, com a âncora (“depois que eu…”) e o hábito novo (“eu vou…”)</template>
+<template data-msg="contagem">Compromissos fixos marcados: {fx}. Hábitos presos a uma âncora: {ok} de 21 blocos.</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('mapa',function(K){
+'use strict';
+var $=K.$,$$=K.$$,val=K.val,msg=K.msg;
+function mpRender(){
+  var fx=0,ok=0;
+  $$('[data-mc]').forEach(function(c){var b=c.getAttribute('data-mc'),f=!!val(b+'.f');c.classList.toggle('fx',f);if(f)fx++;if(val(b+'.a')&&val(b+'.h'))ok++});
+  var e=$('#mp-count');if(e)e.textContent=msg('contagem',{fx:fx,ok:ok});
+}
+return {
+falta:function(){for(var d=0;d<7;d++)for(var p=0;p<3;p++)if(val('mp.'+d+'.'+p+'.a')&&val('mp.'+d+'.'+p+'.h'))return [];return [msg('falta')]},
+dyn:mpRender
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnóstico Inicial · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="diagnostico">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 01 · DIAGNÓSTICO INICIAL
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-diagnostico" aria-labelledby="h-diagnostico">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 01 · Fase 0 · Antes de entrar
+  </div>
+  <h1 id="h-diagnostico" tabindex="-1">Diagnóstico Inicial</h1>
+  <p class="lead">Entender o seu momento e conduzir a conversa. Responda com calma: é a partir do que você escreve aqui que a Luciana conduz o começo.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="quote">
+  Escreva do seu jeito. Esta folha serve para você se escutar e para a conversa com a Luciana. Não existe resposta certa.
+</div>
+<div class="paper">
+  <div class="blk">
+    <h2>Dados pessoais</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_diag_nome">Nome</label>
+        <input id="f_diag_nome" data-k="diag.nome" type="text" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_diag_tel">Telefone</label>
+        <input id="f_diag_tel" data-k="diag.tel" type="text" inputmode="tel" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_diag_email">E-mail</label>
+        <input id="f_diag_email" data-k="diag.email" type="text" inputmode="email" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_diag_idade">Idade</label>
+        <div class="inwrap">
+          <input id="f_diag_idade" data-k="diag.idade" type="text" inputmode="numeric" autocomplete="off"><span class="unit" aria-hidden="true">anos</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_diag_peso">Peso</label>
+        <div class="inwrap">
+          <input id="f_diag_peso" data-k="diag.peso" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_diag_altura">Altura</label>
+        <div class="inwrap">
+          <input id="f_diag_altura" data-k="diag.altura" type="text" inputmode="decimal" autocomplete="off" placeholder="1,65"><span class="unit" aria-hidden="true">m</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Cinco perguntas para você se escutar</h2>
+    <div style="margin-top:12px">
+      <div class="q">
+        <label for="f_diag_q1"><span class="qn" aria-hidden="true">1</span><span><span class="sr">Pergunta 1. </span>O que mais incomoda você hoje em relação ao seu peso, corpo ou à sua relação com a comida?</span></label>
+        <textarea id="f_diag_q1" data-k="diag.q1" rows="5"></textarea>
+      </div>
+      <div class="q">
+        <label for="f_diag_q2"><span class="qn" aria-hidden="true">2</span><span><span class="sr">Pergunta 2. </span>O que você já tentou fazer para emagrecer e o que aconteceu depois?</span></label>
+        <textarea id="f_diag_q2" data-k="diag.q2" rows="5"></textarea>
+      </div>
+      <div class="q">
+        <label for="f_diag_q3"><span class="qn" aria-hidden="true">3</span><span><span class="sr">Pergunta 3. </span>Quais são hoje os principais comportamentos ou situações que você acredita que dificultam o seu emagrecimento?</span></label>
+        <textarea id="f_diag_q3" data-k="diag.q3" rows="5"></textarea>
+      </div>
+      <div class="q">
+        <label for="f_diag_q4"><span class="qn" aria-hidden="true">4</span><span><span class="sr">Pergunta 4. </span>O que você deseja conquistar com a mentoria, além de simplesmente perder peso?</span></label>
+        <textarea id="f_diag_q4" data-k="diag.q4" rows="5"></textarea>
+      </div>
+      <div class="q">
+        <label for="f_diag_q5"><span class="qn" aria-hidden="true">5</span><span><span class="sr">Pergunta 5. </span>Se a mentoria der certo para você, o que precisa ter mudado na sua vida quando chegarmos ao “final do processo”?</span></label>
+        <textarea id="f_diag_q5" data-k="diag.q5" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="q hl" style="margin:0">
+      <fieldset class="fld">
+        <legend>Depois de se escutar, o que você decide?</legend>
+        <p class="hint">Esta é a sua decisão. Pode mudar quando quiser.</p>
+        <div class="radios">
+          <input type="radio" class="sr" id="f_diag_decide_0" name="f_diag_decide" data-k="diag.decide" value="sim">
+          <label for="f_diag_decide_0">Eu decido começar</label>
+          <input type="radio" class="sr" id="f_diag_decide_1" name="f_diag_decide" data-k="diag.decide" value="pensar">
+          <label for="f_diag_decide_1">Ainda quero conversar antes</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="diagnostico">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Se escutar e decidir começar.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você se escutou e decidiu começar."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="diagnostico" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="perguntas-1">responder 1 pergunta</template>
+<template data-msg="perguntas-n">responder {n} perguntas</template>
+<template data-msg="decidir">marcar que você decide começar</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('diagnostico',function(K){
+'use strict';
+var val=K.val,msg=K.msg;
+return {
+falta:function(){var m=[],n=0,i;for(i=1;i<=5;i++)if(!val('diag.q'+i))n++;if(n)m.push(n===1?msg('perguntas-1'):msg('perguntas-n',{n:n}));if(val('diag.decide')!=='sim')m.push(msg('decidir'));return m}
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisão dos 30 Dias · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="revisao">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 18 · REVISÃO DOS 30 DIAS
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-revisao" aria-labelledby="h-revisao">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 18 · Fase 6 · Medir e corrigir
+  </div>
+  <h1 id="h-revisao" tabindex="-1">Revisão dos 30 Dias</h1>
+  <p class="lead">Corrigir a rota com dado, porque a percepção engana. Olhe o que você registrou e escolha uma mudança.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2" style="max-width:600px">
+      <div class="fld">
+        <label for="f_rev_de">Período revisado, de</label>
+        <input id="f_rev_de" data-k="rev.de" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_rev_ate">até</label>
+        <input id="f_rev_ate" data-k="rev.ate" type="date" autocomplete="off">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Painel do mês</h2>
+    <p class="hint">Estes números vêm das suas folhas: Rastreador de Hábitos, Planejamento das Refeições e Controle de Peso e Medidas. Não precisa preencher.</p>
+    <div class="stats" style="margin-top:12px">
+      <div class="stat">
+        <b id="rv-ok">0</b><span>Hábitos cumpridos, em dias</span>
+      </div>
+      <div class="stat">
+        <b id="rv-ret">0</b><span>Retomadas</span>
+      </div>
+      <div class="stat">
+        <b id="rv-ref">0</b><span>Refeições planejadas, de 42</span>
+      </div>
+      <div class="stat">
+        <b class="sm" id="rv-peso">Sem medida</b><span>Peso, do início à última medida</span>
+      </div>
+      <div class="stat">
+        <b id="rv-med">0</b><span>Medidas registradas, de 24</span>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Olhando para trás</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_rev_cumpri">O que eu cumpri</label>
+        <textarea id="f_rev_cumpri" data-k="rev.cumpri" rows="4"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_rev_escapou">O que escapou</label>
+        <textarea id="f_rev_escapou" data-k="rev.escapou" rows="4"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_rev_atrapalhou">O que atrapalhou</label>
+        <textarea id="f_rev_atrapalhou" data-k="rev.atrapalhou" rows="4"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_rev_mudo">O que eu posso mudar</label>
+        <p class="hint" id="f_rev_mudo_h">Liste o que você pode mudar. Depois escolha uma só, abaixo.</p>
+        <textarea id="f_rev_mudo" data-k="rev.mudo" rows="4" aria-describedby="f_rev_mudo_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="q hl" style="margin:0">
+      <div class="stack">
+        <div class="fld">
+          <label for="f_rev_dado">O dado do meu registro que me mostrou isso</label>
+          <p class="hint" id="f_rev_dado_h">Um número ou um padrão que você viu no painel ou nas suas folhas.</p>
+          <textarea id="f_rev_dado" data-k="rev.dado" rows="3" aria-describedby="f_rev_dado_h"></textarea>
+        </div>
+        <div class="fld">
+          <label for="f_rev_decisao">Minha única decisão para o mês seguinte</label>
+          <p class="hint" id="f_rev_decisao_h">Uma coisa específica, a partir do seu próprio registro.</p>
+          <textarea id="f_rev_decisao" data-k="rev.decisao" rows="3" aria-describedby="f_rev_decisao_h"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="revisao">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Reconhecer o seu avanço, mesmo em semana de peso parado, e mudar uma coisa específica para o mês seguinte, com base no seu registro.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você mudou uma coisa específica, a partir do seu próprio registro."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="revisao" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-dado">apontar o dado do seu registro que mostrou isso</template>
+<template data-msg="falta-decisao">escrever a sua única decisão para o mês seguinte</template>
+<template data-msg="peso">{a} kg para {z} kg</template>
+<template data-msg="sem-medida">Sem medida</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('revisao',function(K){
+'use strict';
+var $=K.$,num=K.num,fnum=K.fnum,val=K.val,S=K.S,msg=K.msg;
+/* As mesmas medidas do Controle de Peso e Medidas. Se uma medida nova for criada lá, acrescente aqui também. */
+var MED=['peso','cintura','quadril','peito','braco','coxa'];
+function revRender(){
+  var ok=0,rt=0,h,ref=0,pe=[],med=0,w;
+  for(h=1;h<=4;h++){var c=K.rtCalc(h);ok+=c.ok;rt+=c.ret}
+  Object.keys(S.f).forEach(function(k){if(/^pl\.\d\.\d$/.test(k)&&S.f[k].trim())ref++});
+  for(w=1;w<=4;w++){var v=num(val('med.peso.'+w));if(v!==null)pe.push(v)}
+  MED.forEach(function(x){for(w=1;w<=4;w++)if(num(val('med.'+x+'.'+w))!==null)med++});
+  var st=num(val('lp.peso')),a=st!==null?st:(pe.length?pe[0]:null),z=pe.length?pe[pe.length-1]:null;
+  var pt=(a!==null&&z!==null)?msg('peso',{a:fnum(a),z:fnum(z)}):msg('sem-medida');
+  var set=function(id,t){var e=$('#'+id);if(e&&e.textContent!==String(t))e.textContent=t};
+  set('rv-ok',ok);set('rv-ret',rt);set('rv-ref',ref);set('rv-peso',pt);set('rv-med',med);
+}
+return {
+falta:function(){var m=[];if(!val('rev.dado'))m.push(msg('falta-dado'));if(!val('rev.decisao'))m.push(msg('falta-decisao'));return m},
+dyn:revRender
+};
+});
+</script>
+</body></html>

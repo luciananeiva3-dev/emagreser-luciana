@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guia de Evento · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="evento">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 15 · GUIA DE EVENTO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-evento" aria-labelledby="h-evento">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 15 · Fase 5 · Sair da rotina sem sair do processo
+  </div>
+  <h1 id="h-evento" tabindex="-1">Guia de Evento</h1>
+  <p class="lead">Aplicar o método em churrasco, festa, viagem e restaurante, para viver e emagrecer ao mesmo tempo.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <p class="hint" style="margin-top:0">Pense em cada tipo de evento com antecedência: o que decidir antes, o que fazer durante e como voltar depois. Você pode usar o prato por grupos da <a href="#prato">Composição do Prato</a>, o <a href="#coringa">alimento coringa</a> e as <a href="#frases">frases para dizer não</a>.</p>
+  <div class="blk">
+    <h2>Churrasco</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_ev_chu_antes">Antes</label>
+        <p class="hint" id="f_ev_chu_antes_h">O que eu decido e preparo antes de sair de casa?</p>
+        <textarea id="f_ev_chu_antes" data-k="ev.chu.antes" rows="3" aria-describedby="f_ev_chu_antes_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_chu_dur">Durante</label>
+        <p class="hint" id="f_ev_chu_dur_h">O que eu faço no prato e na mesa?</p>
+        <textarea id="f_ev_chu_dur" data-k="ev.chu.dur" rows="3" aria-describedby="f_ev_chu_dur_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_chu_dep">Depois</label>
+        <p class="hint" id="f_ev_chu_dep_h">Como eu volto ao plano, sem recomeçar do zero?</p>
+        <textarea id="f_ev_chu_dep" data-k="ev.chu.dep" rows="3" aria-describedby="f_ev_chu_dep_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_chu_est">Minha estratégia</label>
+        <p class="hint" id="f_ev_chu_est_h">Uma frase que resume o meu plano para este evento.</p>
+        <textarea id="f_ev_chu_est" data-k="ev.chu.est" rows="3" aria-describedby="f_ev_chu_est_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Festa</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_ev_fes_antes">Antes</label>
+        <p class="hint" id="f_ev_fes_antes_h">O que eu decido e preparo antes de sair de casa?</p>
+        <textarea id="f_ev_fes_antes" data-k="ev.fes.antes" rows="3" aria-describedby="f_ev_fes_antes_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_fes_dur">Durante</label>
+        <p class="hint" id="f_ev_fes_dur_h">O que eu faço no prato e na mesa?</p>
+        <textarea id="f_ev_fes_dur" data-k="ev.fes.dur" rows="3" aria-describedby="f_ev_fes_dur_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_fes_dep">Depois</label>
+        <p class="hint" id="f_ev_fes_dep_h">Como eu volto ao plano, sem recomeçar do zero?</p>
+        <textarea id="f_ev_fes_dep" data-k="ev.fes.dep" rows="3" aria-describedby="f_ev_fes_dep_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_fes_est">Minha estratégia</label>
+        <p class="hint" id="f_ev_fes_est_h">Uma frase que resume o meu plano para este evento.</p>
+        <textarea id="f_ev_fes_est" data-k="ev.fes.est" rows="3" aria-describedby="f_ev_fes_est_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Viagem</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_ev_via_antes">Antes</label>
+        <p class="hint" id="f_ev_via_antes_h">O que eu decido e preparo antes de sair de casa?</p>
+        <textarea id="f_ev_via_antes" data-k="ev.via.antes" rows="3" aria-describedby="f_ev_via_antes_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_via_dur">Durante</label>
+        <p class="hint" id="f_ev_via_dur_h">O que eu faço no prato e na mesa?</p>
+        <textarea id="f_ev_via_dur" data-k="ev.via.dur" rows="3" aria-describedby="f_ev_via_dur_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_via_dep">Depois</label>
+        <p class="hint" id="f_ev_via_dep_h">Como eu volto ao plano, sem recomeçar do zero?</p>
+        <textarea id="f_ev_via_dep" data-k="ev.via.dep" rows="3" aria-describedby="f_ev_via_dep_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_via_est">Minha estratégia</label>
+        <p class="hint" id="f_ev_via_est_h">Uma frase que resume o meu plano para este evento.</p>
+        <textarea id="f_ev_via_est" data-k="ev.via.est" rows="3" aria-describedby="f_ev_via_est_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Restaurante</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_ev_res_antes">Antes</label>
+        <p class="hint" id="f_ev_res_antes_h">O que eu decido e preparo antes de sair de casa?</p>
+        <textarea id="f_ev_res_antes" data-k="ev.res.antes" rows="3" aria-describedby="f_ev_res_antes_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_res_dur">Durante</label>
+        <p class="hint" id="f_ev_res_dur_h">O que eu faço no prato e na mesa?</p>
+        <textarea id="f_ev_res_dur" data-k="ev.res.dur" rows="3" aria-describedby="f_ev_res_dur_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_res_dep">Depois</label>
+        <p class="hint" id="f_ev_res_dep_h">Como eu volto ao plano, sem recomeçar do zero?</p>
+        <textarea id="f_ev_res_dep" data-k="ev.res.dep" rows="3" aria-describedby="f_ev_res_dep_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_ev_res_est">Minha estratégia</label>
+        <p class="hint" id="f_ev_res_est_h">Uma frase que resume o meu plano para este evento.</p>
+        <textarea id="f_ev_res_est" data-k="ev.res.est" rows="3" aria-describedby="f_ev_res_est_h"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paper">
+  <h2>O meu evento de verdade</h2>
+  <p class="hint">Escolha um evento real da sua agenda, atravesse e volte aqui para contar.</p>
+  <div class="stack" style="margin-top:10px">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_ev_u_tipo">Qual foi o evento</label>
+        <select id="f_ev_u_tipo" data-k="ev.u.tipo"><option value="">Escolha o evento</option><option value="Churrasco">Churrasco</option><option value="Festa">Festa</option><option value="Viagem">Viagem</option><option value="Restaurante">Restaurante</option><option value="Outro evento">Outro evento</option></select>
+      </div>
+      <div class="fld">
+        <label for="f_ev_u_data">Data</label>
+        <input id="f_ev_u_data" data-k="ev.u.data" type="date" autocomplete="off">
+      </div>
+    </div>
+    <div class="fld">
+      <label for="f_ev_u_relato">Como eu atravessei o evento</label>
+      <p class="hint" id="f_ev_u_relato_h">O que você decidiu, o que aconteceu e como voltou ao plano.</p>
+      <textarea id="f_ev_u_relato" data-k="ev.u.relato" rows="5" aria-describedby="f_ev_u_relato_h"></textarea>
+    </div>
+    <fieldset class="fld">
+      <legend>Passei pelo evento sem o “já estraguei tudo”?</legend>
+      <div class="radios">
+        <input type="radio" class="sr" id="f_ev_u_ok_0" name="f_ev_u_ok" data-k="ev.u.ok" value="sim">
+        <label for="f_ev_u_ok_0">Sim</label>
+        <input type="radio" class="sr" id="f_ev_u_ok_1" name="f_ev_u_ok" data-k="ev.u.ok" value="ainda nao">
+        <label for="f_ev_u_ok_1">Ainda não</label>
+      </div>
+    </fieldset>
+    <div style="max-width:200px">
+      <div class="photo" data-ph="ev.foto">
+        <div class="lab" id="ph_ev_foto_l">
+          Foto do prato no evento (opcional)
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_ev_foto_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_ev_foto" accept="image/*" data-phin="ev.foto" aria-label="Escolher foto: Foto do prato no evento (opcional)">
+        <label class="btn sm" for="ph_ev_foto" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="ev.foto" hidden>Remover</button>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="evento">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Atravessar um evento sem o “já estraguei tudo”.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você atravessou o evento sem o “já estraguei tudo”."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="evento" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-registro">registrar qual foi o evento e como foi</template>
+<template data-msg="falta-ok">marcar que passou sem o “já estraguei tudo”</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('evento',function(K){
+'use strict';
+var val=K.val,msg=K.msg;
+return {
+falta:function(){var m=[];if(!val('ev.u.tipo')||!val('ev.u.relato'))m.push(msg('falta-registro'));if(val('ev.u.ok')!=='sim')m.push(msg('falta-ok'));return m}
+};
+});
+</script>
+</body></html>

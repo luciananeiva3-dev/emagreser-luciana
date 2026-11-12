@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rastreador de Hábitos Progressivo · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="rastreador">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 12 · RASTREADOR DE HÁBITOS PROGRESSIVO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-rastreador" aria-labelledby="h-rastreador">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 12 · Fase 4 · Executar e repetir
+  </div>
+  <h1 id="h-rastreador" tabindex="-1">Rastreador de Hábitos Progressivo</h1>
+  <p class="lead">Repetir o combinado e enxergar a sequência. Aqui falhar é dado, e voltar é o que conta.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="rule">
+  <b>Regra da folha</b>
+  <p>Nunca falhar duas vezes seguidas. Falhou hoje? Amanhã é dia de retomar, e a retomada conta.</p>
+</div>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2" style="max-width:600px">
+      <div class="fld">
+        <label for="f_rt_mes">Mês</label>
+        <input id="f_rt_mes" data-k="rt.mes" type="text" autocomplete="off" placeholder="Ex.: outubro">
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fld">
+        <label for="f_rt_comb">Meu combinado do mês</label>
+        <p class="hint" id="f_rt_comb_h">O que eu me comprometi a repetir neste mês, e como vou me lembrar.</p>
+        <textarea id="f_rt_comb" data-k="rt.comb" rows="3" aria-describedby="f_rt_comb_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Meus hábitos</h2>
+    <p class="hint">Você começa com a água. O segundo hábito, na segunda semana, vem sugerido: dia sem doce e fritura, com visto no dia em que você passou sem. Os próximos entram ao longo do processo, combinados com a Luciana no encontro, conforme a sua maior dificuldade. Quando um hábito for combinado, escreva o nome na linha dele e comece a marcar.</p>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_rt_h1">Hábito 1</label>
+        <p class="hint" id="f_rt_h1_h">O método começa pela água.</p>
+        <input id="f_rt_h1" data-k="rt.h1" type="text" autocomplete="off" aria-describedby="f_rt_h1_h">
+      </div>
+      <div class="fld">
+        <label for="f_rt_h2">Hábito 2</label>
+        <p class="hint" id="f_rt_h2_h">Sugestão para a segunda semana: dia sem doce e fritura, marcado por dia em sim ou não. Visto quer dizer que você passou o dia sem, e x quer dizer que comeu. Quando o resultado no corpo não vem, esse registro ajuda a descobrir o que está atrapalhando, e mostra que isso pesa no emagrecimento e também na saúde. Você pode trocar o nome ou apagar, se combinar outro com a Luciana.</p>
+        <input id="f_rt_h2" data-k="rt.h2" type="text" autocomplete="off" placeholder="A combinar no encontro" aria-describedby="f_rt_h2_h">
+      </div>
+      <div class="fld">
+        <label for="f_rt_h3">Hábito 3</label>
+        <p class="hint" id="f_rt_h3_h">Deixe em branco até combinar com a Luciana.</p>
+        <input id="f_rt_h3" data-k="rt.h3" type="text" autocomplete="off" placeholder="A combinar no encontro" aria-describedby="f_rt_h3_h">
+      </div>
+      <div class="fld">
+        <label for="f_rt_h4">Hábito 4</label>
+        <p class="hint" id="f_rt_h4_h">Deixe em branco até combinar com a Luciana.</p>
+        <input id="f_rt_h4" data-k="rt.h4" type="text" autocomplete="off" placeholder="A combinar no encontro" aria-describedby="f_rt_h4_h">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Meu mês</h2>
+    <p class="hint">Toque em um dia: o primeiro toque marca cumprido, o segundo marca que não cumpriu, o terceiro limpa. A coluna de um hábito ainda não combinado fica em cinza.</p>
+    <div class="rleg" aria-hidden="true">
+      <span><i class="rc ok">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg></i>cumpri</span><span><i class="rc no">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"></path></svg></i>não cumpri</span><span><i class="rc ok ret">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg></i>retomada</span><span><i class="rc neu"></i>hábito ainda não combinado</span>
+    </div>
+    <div class="rgrid" id="rgrid">
+      <div class="rband" aria-label="Semana 1">
+        Sem. 1
+      </div>
+      <div class="rbh" data-rname="1">
+      </div>
+      <div class="rbh" data-rname="2">
+      </div>
+      <div class="rbh" data-rname="3">
+      </div>
+      <div class="rbh" data-rname="4">
+      </div>
+      <div class="rday">
+        1
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="1"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="1"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="1"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="1"></button>
+      <div class="rday">
+        2
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="2"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="2"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="2"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="2"></button>
+      <div class="rday">
+        3
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="3"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="3"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="3"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="3"></button>
+      <div class="rday">
+        4
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="4"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="4"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="4"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="4"></button>
+      <div class="rday">
+        5
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="5"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="5"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="5"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="5"></button>
+      <div class="rday">
+        6
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="6"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="6"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="6"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="6"></button>
+      <div class="rday">
+        7
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="7"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="7"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="7"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="7"></button>
+      <div class="rband" aria-label="Semana 2">
+        Sem. 2
+      </div>
+      <div class="rbh" data-rname="1">
+      </div>
+      <div class="rbh" data-rname="2">
+      </div>
+      <div class="rbh" data-rname="3">
+      </div>
+      <div class="rbh" data-rname="4">
+      </div>
+      <div class="rday">
+        8
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="8"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="8"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="8"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="8"></button>
+      <div class="rday">
+        9
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="9"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="9"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="9"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="9"></button>
+      <div class="rday">
+        10
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="10"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="10"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="10"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="10"></button>
+      <div class="rday">
+        11
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="11"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="11"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="11"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="11"></button>
+      <div class="rday">
+        12
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="12"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="12"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="12"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="12"></button>
+      <div class="rday">
+        13
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="13"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="13"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="13"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="13"></button>
+      <div class="rday">
+        14
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="14"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="14"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="14"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="14"></button>
+      <div class="rband" aria-label="Semana 3">
+        Sem. 3
+      </div>
+      <div class="rbh" data-rname="1">
+      </div>
+      <div class="rbh" data-rname="2">
+      </div>
+      <div class="rbh" data-rname="3">
+      </div>
+      <div class="rbh" data-rname="4">
+      </div>
+      <div class="rday">
+        15
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="15"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="15"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="15"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="15"></button>
+      <div class="rday">
+        16
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="16"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="16"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="16"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="16"></button>
+      <div class="rday">
+        17
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="17"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="17"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="17"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="17"></button>
+      <div class="rday">
+        18
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="18"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="18"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="18"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="18"></button>
+      <div class="rday">
+        19
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="19"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="19"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="19"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="19"></button>
+      <div class="rday">
+        20
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="20"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="20"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="20"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="20"></button>
+      <div class="rday">
+        21
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="21"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="21"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="21"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="21"></button>
+      <div class="rband" aria-label="Semana 4">
+        Sem. 4
+      </div>
+      <div class="rbh" data-rname="1">
+      </div>
+      <div class="rbh" data-rname="2">
+      </div>
+      <div class="rbh" data-rname="3">
+      </div>
+      <div class="rbh" data-rname="4">
+      </div>
+      <div class="rday">
+        22
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="22"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="22"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="22"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="22"></button>
+      <div class="rday">
+        23
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="23"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="23"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="23"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="23"></button>
+      <div class="rday">
+        24
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="24"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="24"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="24"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="24"></button>
+      <div class="rday">
+        25
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="25"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="25"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="25"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="25"></button>
+      <div class="rday">
+        26
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="26"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="26"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="26"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="26"></button>
+      <div class="rday">
+        27
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="27"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="27"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="27"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="27"></button>
+      <div class="rday">
+        28
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="28"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="28"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="28"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="28"></button>
+      <div class="rday">
+        29
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="29"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="29"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="29"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="29"></button>
+      <div class="rday">
+        30
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="30"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="30"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="30"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="30"></button>
+      <div class="rday">
+        31
+      </div>
+      <button type="button" class="rc" data-act="x-rt" data-h="1" data-d="31"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="2" data-d="31"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="3" data-d="31"></button>
+      <button type="button" class="rc" data-act="x-rt" data-h="4" data-d="31"></button>
+    </div>
+    <div class="ralert" id="rt-alert" role="status" hidden>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Meus números</h2>
+    <div class="stats" style="margin-top:10px">
+      <div class="stat">
+        <b id="rt-ok">0</b><span>Dias cumpridos</span>
+      </div>
+      <div class="stat">
+        <b id="rt-ret">0</b><span>Retomadas: vezes que voltei depois de falhar</span>
+      </div>
+    </div>
+    <ul class="rlist" id="rt-list">
+    </ul>
+  </div>
+</div>
+<aside class="marco" data-marco="rastreador">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Registrar a primeira retomada depois de uma falha.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você voltou depois de uma falha, e a retomada contou."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="rastreador" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta">ter uma retomada: marcar que não cumpriu em um dia e voltar a marcar o hábito depois</template>
+<template data-msg="cumprido-1">{n} dia cumprido</template>
+<template data-msg="cumprido-n">{n} dias cumpridos</template>
+<template data-msg="retomada-1">{n} retomada</template>
+<template data-msg="retomada-n">{n} retomadas</template>
+<template data-msg="a-combinar">A combinar</template>
+<template data-msg="lab-off">{nome}, dia {d}: hábito ainda não combinado.</template>
+<template data-msg="lab">{nome}, dia {d}: {estado}{ret}. Toque para mudar.</template>
+<template data-msg="est-ok">cumprido</template>
+<template data-msg="est-no">não cumpri</template>
+<template data-msg="est-vazio">em branco</template>
+<template data-msg="lab-retomada">retomada</template>
+<template data-msg="alerta">Dois dias seguidos sem cumprir: {itens}. Sem culpa: o próximo dia é de retomar, e a retomada conta.</template>
+<template data-msg="alerta-item">{nome} (dias {a} e {b})</template>
+<template data-row="lista-item">
+<li>{texto}</li>
+</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('rastreador',function(K){
+'use strict';
+var $=K.$,$$=K.$$,CK=K.CK,XK=K.XK,S=K.S,touch=K.touch,msg=K.msg,row=K.row,rtRaw=K.rtRaw,rtOn=K.rtOn,rtName=K.rtName,rtCalc=K.rtCalc;
+function rtRender(){
+  var calc={},tot=0,rt=0,al=[],h,lis='';
+  for(h=1;h<=4;h++){calc[h]=rtCalc(h);tot+=calc[h].ok;rt+=calc[h].ret;
+    if(rtOn(h))lis+=row('lista-item',{texto:rtName(h)+': '+msg(calc[h].ok===1?'cumprido-1':'cumprido-n',{n:calc[h].ok})+', '+msg(calc[h].ret===1?'retomada-1':'retomada-n',{n:calc[h].ret})});
+    if(rtOn(h)&&calc[h].open)al.push(msg('alerta-item',{nome:rtName(h),a:calc[h].open-1,b:calc[h].open}));
+  }
+  $$('[data-rname]').forEach(function(e){var hh=+e.getAttribute('data-rname'),on=rtOn(hh),n=on?rtName(hh):msg('a-combinar');if(e.textContent!==n)e.textContent=n;e.classList.toggle('off',!on)});
+  $$('#rgrid [data-act=x-rt]').forEach(function(b){
+    var hh=+b.getAttribute('data-h'),d=+b.getAttribute('data-d');
+    if(!rtOn(hh)){
+      if(b.className!=='rc neu')b.className='rc neu';
+      if(!b.disabled)b.disabled=true;
+      if(b.getAttribute('data-st')!==''){b.setAttribute('data-st','');b.innerHTML=''}
+      var lb0=msg('lab-off',{nome:rtName(hh),d:d});if(b.getAttribute('aria-label')!==lb0)b.setAttribute('aria-label',lb0);
+      return;
+    }
+    if(b.disabled)b.disabled=false;
+    var v=S.f['rt.'+hh+'.'+d],c=calc[hh],st=v==='1'?'ok':v==='0'?'no':'',isr=c.retd.indexOf(d)>-1,cls='rc'+(st?' '+st:'')+(isr?' ret':'')+(c.warn.indexOf(d)>-1?' warn':'');
+    var lab=msg('lab',{nome:rtName(hh),d:d,estado:msg(st?'est-'+st:'est-vazio'),ret:isr?', '+msg('lab-retomada'):''});
+    if(b.className!==cls)b.className=cls;
+    if(b.getAttribute('data-st')!==st){b.setAttribute('data-st',st);b.innerHTML=st==='ok'?CK:st==='no'?XK:''}
+    if(b.getAttribute('aria-label')!==lab)b.setAttribute('aria-label',lab);
+  });
+  $('#rt-ok').textContent=tot;$('#rt-ret').textContent=rt;$('#rt-list').innerHTML=lis;
+  var a=$('#rt-alert');a.hidden=!al.length;if(al.length)a.textContent=msg('alerta',{itens:al.join('; ')});
+}
+return {
+falta:function(){var r=0;[1,2,3,4].forEach(function(h){r+=rtCalc(h).ret});return r?[]:[msg('falta')]},
+dyn:rtRender,
+acao:function(act,b){
+  if(act==='x-rt'){var k='rt.'+b.getAttribute('data-h')+'.'+b.getAttribute('data-d'),v=S.f[k];if(v==='1')S.f[k]='0';else if(v==='0')delete S.f[k];else S.f[k]='1';touch()}
+},
+coletaExtra:function(out,add){
+  var hab={};Object.keys(S.f).forEach(function(k){var m=/^rt\.(\d)\.(\d+)$/.exec(k);if(m){var h=hab[m[1]]||(hab[m[1]]={f:0,n:0});if(S.f[k]==='1')h.f++;else if(S.f[k]==='0')h.n++}});
+  var hk=Object.keys(hab).sort();
+  if(hk.length){out.push('','[Marcações do rastreador]');hk.forEach(function(h){var nm=rtRaw(+h);add('Hábito '+h+(nm?' ('+nm+')':'')+': feito em '+hab[h].f+' '+(hab[h].f===1?'dia':'dias')+', não feito em '+hab[h].n+' '+(hab[h].n===1?'dia':'dias'))})}
+}
+};
+});
+</script>
+</body></html>

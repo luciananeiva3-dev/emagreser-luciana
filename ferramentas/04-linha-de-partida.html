@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linha de Partida · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="linha">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 04 · LINHA DE PARTIDA
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-linha" aria-labelledby="h-linha">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 04 · Fase 1 · Despertar
+  </div>
+  <h1 id="h-linha" tabindex="-1">Linha de Partida</h1>
+  <p class="lead">Registrar o ponto zero com o que a balança não mostra. É com este registro que você vai se comparar depois.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="rule">
+  <b>Regra da medição</b>
+  <p>Sempre no mesmo dia da semana, no mesmo horário, ao acordar, depois do banheiro.</p>
+</div>
+<div class="paper">
+  <div class="blk">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_lp_data">Data do registro</label>
+        <input id="f_lp_data" data-k="lp.data" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_lp_peso">Peso</label>
+        <div class="inwrap">
+          <input id="f_lp_peso" data-k="lp.peso" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Medidas</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld">
+        <label for="f_lp_cintura">Cintura</label>
+        <div class="inwrap">
+          <input id="f_lp_cintura" data-k="lp.cintura" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_lp_quadril">Quadril</label>
+        <div class="inwrap">
+          <input id="f_lp_quadril" data-k="lp.quadril" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_lp_peito">Peito</label>
+        <div class="inwrap">
+          <input id="f_lp_peito" data-k="lp.peito" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_lp_braco">Braço</label>
+        <div class="inwrap">
+          <input id="f_lp_braco" data-k="lp.braco" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_lp_coxa">Coxa</label>
+        <div class="inwrap">
+          <input id="f_lp_coxa" data-k="lp.coxa" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">cm</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Fotos</h2>
+    <p class="hint">Três fotos, com a mesma roupa e no mesmo lugar. Elas ficam só neste aparelho e na ficha que você baixar.</p>
+    <div class="photos3">
+      <div class="photo" data-ph="lp.frente">
+        <div class="lab" id="ph_lp_frente_l">
+          Frente
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_lp_frente_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_lp_frente" accept="image/*" data-phin="lp.frente" aria-label="Escolher foto: Frente">
+        <label class="btn sm" for="ph_lp_frente" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="lp.frente" hidden>Remover</button>
+      </div>
+      <div class="photo" data-ph="lp.lado">
+        <div class="lab" id="ph_lp_lado_l">
+          Lado
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_lp_lado_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_lp_lado" accept="image/*" data-phin="lp.lado" aria-label="Escolher foto: Lado">
+        <label class="btn sm" for="ph_lp_lado" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="lp.lado" hidden>Remover</button>
+      </div>
+      <div class="photo" data-ph="lp.costas">
+        <div class="lab" id="ph_lp_costas_l">
+          Costas
+        </div>
+        <div class="pbox" role="img" aria-labelledby="ph_lp_costas_l">
+          <span class="pe">Sem foto ainda</span>
+        </div>
+        <input type="file" class="sr" id="ph_lp_costas" accept="image/*" data-phin="lp.costas" aria-label="Escolher foto: Costas">
+        <label class="btn sm" for="ph_lp_costas" data-phlab>Adicionar foto</label>
+        <button type="button" class="btn quiet" data-act="ph-rm" data-ph="lp.costas" hidden>Remover</button>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="fld">
+      <label for="f_lp_roupa">Roupa-teste escolhida</label>
+      <p class="hint" id="f_lp_roupa_h">Descreva a peça que você vai experimentar de novo ao longo do processo.</p>
+      <textarea id="f_lp_roupa" data-k="lp.roupa" rows="3" aria-describedby="f_lp_roupa_h"></textarea>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="stack" style="gap:22px">
+      <fieldset class="fld">
+        <legend>Disposição hoje, de 0 a 10</legend>
+        <p class="hint">0 é nenhuma disposição, 10 é muita disposição.</p>
+        <div class="pick-row">
+          <input type="radio" class="sr" id="f_lp_disp_0" name="f_lp_disp" data-k="lp.disp" value="0">
+          <label for="f_lp_disp_0">0</label>
+          <input type="radio" class="sr" id="f_lp_disp_1" name="f_lp_disp" data-k="lp.disp" value="1">
+          <label for="f_lp_disp_1">1</label>
+          <input type="radio" class="sr" id="f_lp_disp_2" name="f_lp_disp" data-k="lp.disp" value="2">
+          <label for="f_lp_disp_2">2</label>
+          <input type="radio" class="sr" id="f_lp_disp_3" name="f_lp_disp" data-k="lp.disp" value="3">
+          <label for="f_lp_disp_3">3</label>
+          <input type="radio" class="sr" id="f_lp_disp_4" name="f_lp_disp" data-k="lp.disp" value="4">
+          <label for="f_lp_disp_4">4</label>
+          <input type="radio" class="sr" id="f_lp_disp_5" name="f_lp_disp" data-k="lp.disp" value="5">
+          <label for="f_lp_disp_5">5</label>
+          <input type="radio" class="sr" id="f_lp_disp_6" name="f_lp_disp" data-k="lp.disp" value="6">
+          <label for="f_lp_disp_6">6</label>
+          <input type="radio" class="sr" id="f_lp_disp_7" name="f_lp_disp" data-k="lp.disp" value="7">
+          <label for="f_lp_disp_7">7</label>
+          <input type="radio" class="sr" id="f_lp_disp_8" name="f_lp_disp" data-k="lp.disp" value="8">
+          <label for="f_lp_disp_8">8</label>
+          <input type="radio" class="sr" id="f_lp_disp_9" name="f_lp_disp" data-k="lp.disp" value="9">
+          <label for="f_lp_disp_9">9</label>
+          <input type="radio" class="sr" id="f_lp_disp_10" name="f_lp_disp" data-k="lp.disp" value="10">
+          <label for="f_lp_disp_10">10</label>
+        </div>
+      </fieldset>
+      <fieldset class="fld">
+        <legend>Qualidade do sono, de 0 a 10</legend>
+        <p class="hint">0 é dormi muito mal, 10 é dormi muito bem.</p>
+        <div class="pick-row">
+          <input type="radio" class="sr" id="f_lp_sono_0" name="f_lp_sono" data-k="lp.sono" value="0">
+          <label for="f_lp_sono_0">0</label>
+          <input type="radio" class="sr" id="f_lp_sono_1" name="f_lp_sono" data-k="lp.sono" value="1">
+          <label for="f_lp_sono_1">1</label>
+          <input type="radio" class="sr" id="f_lp_sono_2" name="f_lp_sono" data-k="lp.sono" value="2">
+          <label for="f_lp_sono_2">2</label>
+          <input type="radio" class="sr" id="f_lp_sono_3" name="f_lp_sono" data-k="lp.sono" value="3">
+          <label for="f_lp_sono_3">3</label>
+          <input type="radio" class="sr" id="f_lp_sono_4" name="f_lp_sono" data-k="lp.sono" value="4">
+          <label for="f_lp_sono_4">4</label>
+          <input type="radio" class="sr" id="f_lp_sono_5" name="f_lp_sono" data-k="lp.sono" value="5">
+          <label for="f_lp_sono_5">5</label>
+          <input type="radio" class="sr" id="f_lp_sono_6" name="f_lp_sono" data-k="lp.sono" value="6">
+          <label for="f_lp_sono_6">6</label>
+          <input type="radio" class="sr" id="f_lp_sono_7" name="f_lp_sono" data-k="lp.sono" value="7">
+          <label for="f_lp_sono_7">7</label>
+          <input type="radio" class="sr" id="f_lp_sono_8" name="f_lp_sono" data-k="lp.sono" value="8">
+          <label for="f_lp_sono_8">8</label>
+          <input type="radio" class="sr" id="f_lp_sono_9" name="f_lp_sono" data-k="lp.sono" value="9">
+          <label for="f_lp_sono_9">9</label>
+          <input type="radio" class="sr" id="f_lp_sono_10" name="f_lp_sono" data-k="lp.sono" value="10">
+          <label for="f_lp_sono_10">10</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="fld">
+      <label for="f_lp_exames">Exames e observações</label>
+      <p class="hint" id="f_lp_exames_h">Resultados de exames, acompanhamento de saúde ou qualquer coisa que valha registrar hoje.</p>
+      <textarea id="f_lp_exames" data-k="lp.exames" rows="4" aria-describedby="f_lp_exames_h"></textarea>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="linha">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Registro inicial completo.</p>
+    <p class="ms" data-ms data-done="Conquistado. O seu registro inicial está completo." data-todo="Ainda a conquistar. Faltam itens do registro inicial."></p>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('linha',function(K){
+'use strict';
+
+return {};
+});
+</script>
+</body></html>

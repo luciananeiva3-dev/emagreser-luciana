@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alimento Coringa · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="coringa">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 13 · ALIMENTO CORINGA
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-coringa" aria-labelledby="h-coringa">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 13 · Fase 4 · Executar e repetir
+  </div>
+  <h1 id="h-coringa" tabindex="-1">Alimento Coringa</h1>
+  <p class="lead">Definir de antemão a saída do perrengue. Escolha agora, com a cabeça fria, o que você leva ou compra quando o dia sair do roteiro.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <h2>O que faz um alimento ser coringa</h2>
+    <p class="hint">Coringa é o alimento que resolve quando você está fora de casa, sem tempo e sem opção. Ele passa nos quatro critérios ao mesmo tempo: você gosta, é fácil de comprar, é fácil de carregar e é nutritivo.</p>
+    <div class="venn" style="margin-top:10px">
+      <svg viewBox="0 0 280 280" role="img" aria-label="Quatro círculos que se cruzam: eu gosto, é fácil de comprar, é fácil de carregar, é nutritivo. O centro é o seu alimento coringa."><circle cx="140" cy="88" r="70" fill="#a5523d" fill-opacity=".13" stroke="#a5523d"></circle><circle cx="88" cy="140" r="70" fill="#a5523d" fill-opacity=".13" stroke="#a5523d"></circle><circle cx="192" cy="140" r="70" fill="#a5523d" fill-opacity=".13" stroke="#a5523d"></circle><circle cx="140" cy="192" r="70" fill="#a5523d" fill-opacity=".13" stroke="#a5523d"></circle><text x="140" y="42" text-anchor="middle" font-size="14" font-weight="600">eu gosto</text><text x="40" y="136" text-anchor="middle" font-size="12.5" font-weight="600">é fácil</text><text x="40" y="152" text-anchor="middle" font-size="12.5" font-weight="600">de comprar</text><text x="240" y="136" text-anchor="middle" font-size="12.5" font-weight="600">é fácil</text><text x="240" y="152" text-anchor="middle" font-size="12.5" font-weight="600">de carregar</text><text x="140" y="246" text-anchor="middle" font-size="14" font-weight="600">é nutritivo</text><text x="140" y="136" text-anchor="middle" font-size="14" font-weight="600" style="fill:#8f4330">Meu</text><text x="140" y="154" text-anchor="middle" font-size="14" font-weight="600" style="fill:#8f4330">coringa</text></svg>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>Os meus coringas</h2>
+    <p class="hint">Guarde até três opções. Marque os critérios que cada alimento cumpre. Quando passar nos quatro, ele fica destacado.</p>
+    <div class="cgrid" style="margin-top:12px">
+      <div class="opt" data-opt="1">
+        <h3>Opção 1</h3>
+        <div class="win-t">
+          Este é um coringa: passa nos quatro critérios.
+        </div>
+        <div class="stack" style="gap:10px">
+          <div class="fld">
+            <label for="f_cor_1_a">Alimento</label>
+            <textarea class="ln" id="f_cor_1_a" data-k="cor.1.a" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_cor_1_o">Onde eu compro</label>
+            <textarea class="ln" id="f_cor_1_o" data-k="cor.1.o" rows="1"></textarea>
+          </div>
+        </div>
+        <div class="crit">
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_1_c1" data-k="cor.1.c1">
+            <label class="cbl" for="f_cor_1_c1"><span>eu gosto</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_1_c2" data-k="cor.1.c2">
+            <label class="cbl" for="f_cor_1_c2"><span>é fácil de comprar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_1_c3" data-k="cor.1.c3">
+            <label class="cbl" for="f_cor_1_c3"><span>é fácil de carregar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_1_c4" data-k="cor.1.c4">
+            <label class="cbl" for="f_cor_1_c4"><span>é nutritivo</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="opt" data-opt="2">
+        <h3>Opção 2</h3>
+        <div class="win-t">
+          Este é um coringa: passa nos quatro critérios.
+        </div>
+        <div class="stack" style="gap:10px">
+          <div class="fld">
+            <label for="f_cor_2_a">Alimento</label>
+            <textarea class="ln" id="f_cor_2_a" data-k="cor.2.a" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_cor_2_o">Onde eu compro</label>
+            <textarea class="ln" id="f_cor_2_o" data-k="cor.2.o" rows="1"></textarea>
+          </div>
+        </div>
+        <div class="crit">
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_2_c1" data-k="cor.2.c1">
+            <label class="cbl" for="f_cor_2_c1"><span>eu gosto</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_2_c2" data-k="cor.2.c2">
+            <label class="cbl" for="f_cor_2_c2"><span>é fácil de comprar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_2_c3" data-k="cor.2.c3">
+            <label class="cbl" for="f_cor_2_c3"><span>é fácil de carregar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_2_c4" data-k="cor.2.c4">
+            <label class="cbl" for="f_cor_2_c4"><span>é nutritivo</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="opt" data-opt="3">
+        <h3>Opção 3</h3>
+        <div class="win-t">
+          Este é um coringa: passa nos quatro critérios.
+        </div>
+        <div class="stack" style="gap:10px">
+          <div class="fld">
+            <label for="f_cor_3_a">Alimento</label>
+            <textarea class="ln" id="f_cor_3_a" data-k="cor.3.a" rows="1"></textarea>
+          </div>
+          <div class="fld">
+            <label for="f_cor_3_o">Onde eu compro</label>
+            <textarea class="ln" id="f_cor_3_o" data-k="cor.3.o" rows="1"></textarea>
+          </div>
+        </div>
+        <div class="crit">
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_3_c1" data-k="cor.3.c1">
+            <label class="cbl" for="f_cor_3_c1"><span>eu gosto</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_3_c2" data-k="cor.3.c2">
+            <label class="cbl" for="f_cor_3_c2"><span>é fácil de comprar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_3_c3" data-k="cor.3.c3">
+            <label class="cbl" for="f_cor_3_c3"><span>é fácil de carregar</span></label>
+          </div>
+          <div class="cbw">
+            <input type="checkbox" class="sr" id="f_cor_3_c4" data-k="cor.3.c4">
+            <label class="cbl" for="f_cor_3_c4"><span>é nutritivo</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <h2>O dia em que usei o meu coringa</h2>
+    <p class="hint">Quando o dia sair do previsto e você usar o coringa, conte aqui.</p>
+    <div class="stack" style="margin-top:10px">
+      <div class="g2">
+        <div class="fld">
+          <label for="f_cor_u_data">Data</label>
+          <input id="f_cor_u_data" data-k="cor.u.data" type="date" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cor_u_qual">Qual coringa eu usei</label>
+          <textarea class="ln" id="f_cor_u_qual" data-k="cor.u.qual" rows="1"></textarea>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="f_cor_u_sit">O que aconteceu no dia</label>
+        <textarea id="f_cor_u_sit" data-k="cor.u.sit" rows="3"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_cor_u_como">Como foi ter o coringa comigo</label>
+        <textarea id="f_cor_u_como" data-k="cor.u.como" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="coringa">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Usar o seu coringa em um dia imprevisível.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você usou o seu coringa em um dia imprevisível."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="coringa" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-alimento">escolher ao menos um alimento coringa</template>
+<template data-msg="falta-uso">registrar o dia em que usou o coringa e qual foi</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('coringa',function(K){
+'use strict';
+var $=K.$,val=K.val,msg=K.msg;
+var CRIT=['1','2','3','4'];
+function corRender(){for(var n=1;n<=3;n++){var win=CRIT.every(function(x){return val('cor.'+n+'.c'+x)});var e=$('[data-opt="'+n+'"]');if(e)e.classList.toggle('win',win)}}
+return {
+falta:function(){var m=[],a=false;for(var n=1;n<=3;n++)if(val('cor.'+n+'.a'))a=true;if(!a)m.push(msg('falta-alimento'));if(!val('cor.u.sit')||!val('cor.u.qual'))m.push(msg('falta-uso'));return m},
+dyn:corRender
+};
+});
+</script>
+</body></html>

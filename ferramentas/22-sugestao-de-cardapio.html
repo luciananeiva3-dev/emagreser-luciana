@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sugestão de Cardápio · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="cardapio">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 22 · SUGESTÃO DE CARDÁPIO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-cardapio" aria-labelledby="h-cardapio">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 22 · Fase 3 · Organizar a vida real
+  </div>
+  <h1 id="h-cardapio" tabindex="-1">Sugestão de Cardápio</h1>
+  <p class="lead">Exemplos de composição e de porção para o dia inteiro, em duas visões. A sugestão serve de ideia e de exemplo, e é o mesmo material para todas as mulheres do programa. O ajuste para o seu caso acontece na conversa com a Luciana.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="cdav">
+  Sugestão de referência, igual para todas, para servir de exemplo de composição e de porção. Quem tem condição de saúde, restrição alimentar, alergia ou acompanhamento com outro profissional segue a orientação desse profissional.
+</div>
+<p class="hint cdlink">Quer olhar a refeição por grupos, sem cardápio fechado? Abra a <a href="#prato">Composição do Prato por Grupos</a>.</p>
+<div class="cdtabs noprint" role="group" aria-label="Escolha a visão do cardápio">
+  <button type="button" aria-pressed="true" data-act="x-cd" data-v="a">Durante o processo</button>
+  <button type="button" aria-pressed="false" data-act="x-cd" data-v="b">Meta atingida</button>
+</div>
+<div class="paper cdview" id="cd-a">
+  <h2>Durante o processo</h2>
+  <p class="hint">Sugestão de Cardápio 1.</p>
+  <div class="rule" style="margin:12px 0 0">
+    <b>Instrução geral</b>
+    <p>Em todas as refeições, escolha 1 alimento de cada grupo.</p>
+  </div>
+  <div class="cdm">
+    <h3>Café da manhã</h3>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 1
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 porção de fruta, preferencialmente mamão</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> 1 porção equivale a 100g de fruta ou 1 xícara de chá. Se não gostar de mamão ou não tiver acesso, pode ser outra fruta ou salada de frutas, respeitando a quantidade. O objetivo do mamão pela manhã é auxiliar o funcionamento do intestino.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 2
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 a 2 colheres de sopa de aveia em flocos ou farelo de aveia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 3
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 colher de café de farinha de semente de linhaça</li>
+          <li>1 colher de café de semente de gergelim</li>
+          <li>1 colher de café de semente de chia</li>
+          <li>1 colher de chá de semente de girassol</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Em caso de alergia às sementes, não consumir.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 4
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 a 2 ovos, cozidos, mexidos ou omelete</li>
+          <li>50g de carne de frango, carne bovina ou peixe, podendo ser atum em lata ao óleo</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Se não gostar de ovo nem de outra carne no café da manhã, não precisa se forçar: coma apenas os demais itens.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 5
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 xícara de café ou de chá da sua preferência</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> O ideal é não adoçar. Se precisar, use adoçante à base de estévia 100% ou a menor quantidade possível de açúcar demerara.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da manhã</h3>
+    <div class="cdg">
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 porção de fruta fresca</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> 1 porção equivale a 100g de fruta fresca ou 1 xícara de chá. Pode substituir por 3 damascos secos, 3 ameixas secas, 3 tâmaras secas ou 1 colher de sopa de uva passa. Sempre que possível, prefira a fruta fresca.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Almoço</h3>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 1
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 proteína: carne bovina, frango ou peixe, de 70g a 100g</li>
+          <li>2 ovos</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Essa quantidade de carne equivale a um pedaço que caiba na palma da mão. As carnes podem ser assadas, grelhadas ou cozidas. Os ovos podem ser mexidos, cozidos ou omelete.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 2
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 pires de legumes cozidos, grelhados ou refogados, que dá mais ou menos 3 colheres de sopa</li>
+        </ul>
+        <p class="cdobs"><b>Exemplos:</b> abobrinha, brócolis, couve-flor, berinjela, chuchu, vagem, cenoura.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 3
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>3 a 4 colheres de sopa de arroz integral</li>
+          <li>4 colheres de sopa de purê (100g)</li>
+          <li>1 pedaço pequeno de mandioca cozida (70g)</li>
+          <li>1 pedaço pequeno de batata doce cozida (70g)</li>
+          <li>1 xícara de chá de macarrão cozido sem glúten ou integral (80g)</li>
+          <li>2 colheres de sopa de farofa (40g)</li>
+          <li>3 colheres de sopa de polenta (70g)</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> O consumo de macarrão deve ser limitado a uma vez na semana. O consumo de farofa deve ser limitado a uma vez por semana. O purê pode ser de batata, batata doce, mandioca ou abóbora.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 4
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>3 a 4 colheres de sopa de feijão cozido</li>
+          <li>3 a 4 colheres de sopa de lentilha cozida</li>
+          <li>3 a 4 colheres de sopa de grão de bico cozido</li>
+          <li>3 a 4 colheres de sopa de ervilha cozida</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Feijão ou outra leguminosa, dentro do mesmo um quarto do prato do carboidrato, como na Composição do Prato por Grupos. A vagem é um legume e entra no grupo 2.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 5
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>Salada de folhas, livre</li>
+        </ul>
+        <p class="cdobs"><b>Exemplos:</b> alface, rúcula, agrião, espinafre, couve, repolho, radicchio, almeirão, acelga.</p>
+        <p class="cdobs"><b>Observação:</b> É importante consumir folhas verdes escuras, e dá para misturar com a alface caso você não tenha o hábito. Pode inserir tomate, pepino, rabanete e fruta.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 6
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>Temperos para a salada: azeite, limão, vinagre, mostarda, sal e ervas como orégano, limão, manjericão e hortelã</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Use azeite extra virgem, 1 colher de sobremesa, porque além do sabor ajuda o intestino. Pode usar sal, com moderação, e dá para usar sal marinho ou sal rosa.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da tarde I</h3>
+    <p class="cdnote">Você pode fazer os dois lanches da tarde ou escolher apenas um. O objetivo de fazer dois é evitar chegar com muita fome no jantar.</p>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 1
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 porção de fruta</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> 1 porção equivale a 100g de fruta ou 1 xícara de chá.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 2
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>2 castanhas do Pará</li>
+          <li>5 amêndoas sem sal</li>
+          <li>2 nozes inteiras</li>
+          <li>4 castanhas de caju sem sal</li>
+          <li>1 pedaço de coco fresco (1 pedaço equivale a 1 colher de sopa ou 25g)</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Em caso de alergia às castanhas, você pode comer apenas a fruta.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da tarde II</h3>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 1
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 pedaço pequeno de batata doce cozida (70g)</li>
+          <li>1 pedaço pequeno de mandioca cozida (70g)</li>
+          <li>1 porção de fruta</li>
+          <li>1 espiga de milho cozida pequena</li>
+          <li>1 pedaço pequeno de cuscuz (70g)</li>
+          <li>1 a 2 fatias de pão sem glúten</li>
+          <li>1 a 2 fatias de pão integral</li>
+          <li>1 tapioca com até 3 colheres de sopa de farinha de tapioca</li>
+          <li>1 colher de sopa de aveia mais 1 colher de sopa de farinha de mandioca</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 2
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 ovo</li>
+          <li>2 colheres de sopa de frango</li>
+          <li>2 colheres de sopa de atum em óleo</li>
+          <li>2 colheres de sopa de carne bovina</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Essas proteínas servem para fazer sanduíche, rechear a tapioca, fazer farofa ou acompanhar um alimento do grupo 1.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Jantar, opção 1</h3>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 1
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 proteína: carne bovina, frango ou peixe, 100g</li>
+          <li>2 ovos</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Essa quantidade de carne equivale a um pedaço que caiba na palma da mão. As carnes podem ser assadas, grelhadas ou cozidas. Os ovos podem ser mexidos, cozidos ou omelete.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 2
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 pires de legumes cozidos, grelhados ou refogados, que dá mais ou menos 3 colheres de sopa</li>
+        </ul>
+        <p class="cdobs"><b>Exemplos:</b> abobrinha, brócolis, couve-flor, berinjela, chuchu, vagem, cenoura.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 3
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>Salada de folhas, livre</li>
+        </ul>
+        <p class="cdobs"><b>Exemplos:</b> alface, rúcula, agrião, espinafre, couve, repolho, radicchio, almeirão, acelga.</p>
+        <p class="cdobs"><b>Observação:</b> É importante consumir folhas verdes escuras, e dá para misturar com a alface caso você não tenha o hábito. Pode inserir tomate, pepino, rabanete e fruta.</p>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Grupo 4
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>Temperos para a salada: azeite, limão, vinagre, mostarda, sal e ervas como orégano, limão, manjericão e hortelã</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Use azeite extra virgem, 1 colher de sobremesa, porque além do sabor ajuda o intestino. Pode usar sal, com moderação, e dá para usar sal marinho ou sal rosa.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Jantar, opção 2</h3>
+    <div class="cdg">
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 prato fundo de sopa de legumes e frango</li>
+          <li>1 prato fundo de sopa de legumes e carne</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Pode usar qualquer legume que goste. Batata e mandioca não são legumes. Não coloque macarrão nem arroz na sopa.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Ceia</h3>
+    <div class="cdg">
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>2 castanhas do Pará</li>
+          <li>5 amêndoas sem sal</li>
+          <li>2 nozes inteiras</li>
+          <li>4 castanhas de caju sem sal</li>
+          <li>1 pedaço de coco seco (1 pedaço equivale a 1 colher de sopa de 25g)</li>
+          <li>2 colheres de sopa de abacate</li>
+        </ul>
+        <p class="cdobs"><b>Observação:</b> Caso não tenha fome, não precisa fazer a ceia.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>O que comer antes de se exercitar</h3>
+    <div class="cdg l">
+      <div class="cdgl">
+        Opção I
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 pires de chá de batata doce cozida ou de mandioca cozida, de 100g a 120g</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Opção II
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>1 banana com 1 colher de sopa de farelo de aveia ou aveia em flocos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cdg l">
+      <div class="cdgl">
+        Opção III
+      </div>
+      <div class="cdgb">
+        <ul class="cdo">
+          <li>2 fatias de pão integral ou sem glúten, com manteiga ou geleia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paper cdview" id="cd-b" hidden>
+  <h2>Meta atingida</h2>
+  <p class="hint">O dia inteiro, com a substituição ao lado de cada item.</p>
+  <div class="cdm">
+    <h3>Café da manhã</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 fatia de pão integral
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 pedaço de batata doce cozida (70g), ou cuscuz, aipim ou tapioca
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 queijo minas
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 ovo mexido
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 porção de mamão
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 porção de manga
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Polvilhar linhaça
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Polvilhar chia
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 xícara de café
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 xícara de café
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da manhã</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>2 castanhas do Pará
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 porção de fruta ou 1 barrinha de gergelim
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Almoço</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>100g de frango
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>100g de carne ou peixe
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>3 a 4 colheres de sopa de arroz integral
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>3 a 4 colheres de sopa de purê, ou 1 pedaço de batata ou de aipim
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>3 a 4 colheres de sopa de feijão cozido
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>3 a 4 colheres de sopa de lentilha ou grão de bico
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 pires de abobrinha refogada
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Repolho, chuchu, abóbora, quiabo, brócolis ou couve-flor
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Salada de alface com couve e tomate
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Rúcula, agrião ou escarola
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Tempero: azeite, limão, vinagre e orégano
+      </div>
+      <div class="cdc none">
+        <span class="mph">Substituição</span>Sem substituição indicada
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da tarde I</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 fruta
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 fruta
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>2 castanhas do Pará
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>4 castanhas de caju
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Lanche da tarde II</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 pedaço de batata doce de 70g
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>2 fatias de pão integral ou 70g de cuscuz ou tapioca
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 ovo
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Atum, frango (2 colheres de sopa) ou 1 fatia de queijo
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Jantar I</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>100g de frango
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>100g de carne ou peixe ou hambúrguer ou quibe ou 2 ovos
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>1 pires de abobrinha refogada
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Repolho ou chuchu ou berinjela ou abóbora cabotiá ou quiabo
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Salada de alface com couve e tomate
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Rúcula ou agrião ou escarola
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Temperos: azeite, limão, vinagre e orégano
+      </div>
+      <div class="cdc none">
+        <span class="mph">Substituição</span>Sem substituição indicada
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Ceia</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>2 castanhas do Pará
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>1 kiwi ou 1 maçã
+      </div>
+    </div>
+  </div>
+  <div class="cdm">
+    <h3>Pré-treino</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Opções do lanche da tarde II
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Opções do lanche da tarde II, ou 1 banana com 1 colher de sopa de aveia
+      </div>
+    </div>
+    <p class="cdobs"><b>Observação:</b> Treino entre 18h30 e 21h30.</p>
+  </div>
+  <div class="cdm">
+    <h3>Refeições fora da rotina</h3>
+    <div class="cdh">
+      <span class="mph">No cardápio</span><span class="mph">Substituição</span>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Sábado, no jantar
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Café da manhã ou almoço
+      </div>
+    </div>
+    <div class="cdr">
+      <div class="cdc">
+        <span class="mph">No cardápio</span>Domingo, no almoço
+      </div>
+      <div class="cdc">
+        <span class="mph">Substituição</span>Café da manhã ou jantar
+      </div>
+    </div>
+    <p class="cdobs"><b>Observação:</b> Ajustável em casos de feriados prolongados.</p>
+  </div>
+</div>
+<div class="paper">
+  <h2>O que eu vou adaptar com a Luciana</h2>
+  <p class="hint">Use o cardápio como referência. A sugestão é a mesma para todas, e o ajuste para o seu caso acontece na conversa com a Luciana. Escreva aqui o que muda na sua realidade e leve ao encontro.</p>
+  <div class="stack" style="margin-top:14px;gap:20px">
+    <div class="fld">
+      <label for="f_cd_nc">O que eu não como</label>
+      <p class="hint" id="f_cd_nc_h">Alimentos que você não come ou não quer comer. Se for alergia ou restrição de saúde, conte também ao profissional que acompanha você.</p>
+      <textarea id="f_cd_nc" data-k="cd.nc" rows="3" aria-describedby="f_cd_nc_h"></textarea>
+    </div>
+    <div class="fld">
+      <label for="f_cd_troca">O que eu troco, e pelo quê</label>
+      <textarea id="f_cd_troca" data-k="cd.troca" rows="4" placeholder="Exemplo: troco o mamão pela manga, que eu encontro com mais facilidade."></textarea>
+    </div>
+    <div class="autor">
+      <b>Minha adaptação escolhida</b>
+      <div class="stack" style="gap:12px;margin-top:6px">
+        <div class="fld">
+          <label for="f_cd_ad_ref">Refeição que eu escolho adaptar primeiro</label>
+          <select id="f_cd_ad_ref" data-k="cd.ad.ref"><option value="">Escolha a refeição</option><option value="Café da manhã">Café da manhã</option><option value="Lanche da manhã">Lanche da manhã</option><option value="Almoço">Almoço</option><option value="Lanche da tarde I">Lanche da tarde I</option><option value="Lanche da tarde II">Lanche da tarde II</option><option value="Jantar">Jantar</option><option value="Ceia">Ceia</option><option value="Antes de se exercitar">Antes de se exercitar</option><option value="Refeição fora da rotina">Refeição fora da rotina</option></select>
+        </div>
+        <div class="fld">
+          <label for="f_cd_ad_como">Como fica a minha versão desta refeição</label>
+          <p class="hint" id="f_cd_ad_como_h">Escreva o que você vai comer, na quantidade que cabe para você, a partir da ideia do cardápio.</p>
+          <textarea id="f_cd_ad_como" data-k="cd.ad.como" rows="3" aria-describedby="f_cd_ad_como_h"></textarea>
+        </div>
+      </div>
+    </div>
+    <fieldset class="fld">
+      <legend>Horários que cabem na minha rotina</legend>
+      <p class="hint">Preencha só as refeições que você faz.</p>
+      <div class="g4m">
+        <div class="fld">
+          <label for="f_cd_h_0">Café da manhã</label>
+          <input id="f_cd_h_0" data-k="cd.h.0" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_1">Lanche da manhã</label>
+          <input id="f_cd_h_1" data-k="cd.h.1" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_2">Almoço</label>
+          <input id="f_cd_h_2" data-k="cd.h.2" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_3">Lanche da tarde</label>
+          <input id="f_cd_h_3" data-k="cd.h.3" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_4">Jantar</label>
+          <input id="f_cd_h_4" data-k="cd.h.4" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_5">Ceia</label>
+          <input id="f_cd_h_5" data-k="cd.h.5" type="time" autocomplete="off">
+        </div>
+        <div class="fld">
+          <label for="f_cd_h_6">Treino</label>
+          <input id="f_cd_h_6" data-k="cd.h.6" type="time" autocomplete="off">
+        </div>
+      </div>
+    </fieldset>
+    <div class="fld">
+      <label for="f_cd_duv">Dúvidas que eu quero levar ao encontro</label>
+      <textarea id="f_cd_duv" data-k="cd.duv" rows="4"></textarea>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="cardapio">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Escolher e registrar uma adaptação própria do cardápio, usando-o como referência e não como regra.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. Você escolheu e registrou uma adaptação própria do cardápio."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="cardapio" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta">escolher uma refeição e escrever como fica a sua versão</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('cardapio',function(K){
+'use strict';
+var $=K.$,val=K.val,S=K.S,touch=K.touch,growAll=K.growAll,msg=K.msg;
+function cdRender(){
+  var v=val('cd.view')==='b'?'b':'a';
+  ['a','b'].forEach(function(x){var p=$('#cd-'+x);if(p)p.hidden=(x!==v);var b=$('[data-act="x-cd"][data-v="'+x+'"]');if(b)b.setAttribute('aria-pressed',x===v?'true':'false')});
+  growAll($('#s-cardapio'));
+}
+return {
+falta:function(){return (val('cd.ad.ref')&&val('cd.ad.como'))?[]:[msg('falta')]},
+dyn:cdRender,
+acao:function(act,b){if(act==='x-cd'){S.f['cd.view']=b.getAttribute('data-v')==='b'?'b':'a';touch()}}
+};
+});
+</script>
+</body></html>

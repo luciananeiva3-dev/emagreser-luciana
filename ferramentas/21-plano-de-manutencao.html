@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plano de Manutenção · Kit de Ferramentas EmagreSER</title>
+<link rel="stylesheet" href="../estilo.css">
+</head>
+<body data-raiz="../" data-ferramenta="manutencao">
+<noscript><p style="padding:20px;font-family:sans-serif">Esta ferramenta precisa do JavaScript ligado no navegador.</p></noscript>
+
+<!-- ============================================================
+     FERRAMENTA 21 · PLANO DE MANUTENÇÃO
+     O texto desta ferramenta está escrito aqui embaixo, em HTML comum.
+     Para mudar uma frase, procure a frase exata e troque as palavras.
+     Mexer neste arquivo não muda nenhuma outra ferramenta.
+     Cada campo tem um data-k (o endereço onde a resposta da cliente fica
+     guardada). Pode mudar o rótulo, não o data-k.
+     Número, nome e fase vêm do arquivo lista.js. O menu, o botão de enviar
+     e os botões Anterior e Próxima são colocados pelo kit.js.
+     ============================================================ -->
+<section class="sheet" id="s-manutencao" aria-labelledby="h-manutencao">
+<header class="shead">
+  <div class="eyebrow">
+    Ferramenta 21 · Fase 7 · Sustentar e virar identidade
+  </div>
+  <h1 id="h-manutencao" tabindex="-1">Plano de Manutenção</h1>
+  <p class="lead">Definir o que continua valendo depois da meta, para sustentar sem viver em dieta.</p>
+  <div class="sact">
+    <button type="button" class="btn" data-act="print">Imprimir ou salvar em PDF</button>
+  </div>
+</header>
+<div class="paper">
+  <div class="blk" style="padding:0;border:0;margin:0">
+    <div class="g2" style="max-width:600px">
+      <div class="fld">
+        <label for="f_man_data">Escrito em</label>
+        <input id="f_man_data" data-k="man.data" type="date" autocomplete="off">
+      </div>
+      <div class="fld">
+        <label for="f_man_rever">Vou rever este plano em</label>
+        <input id="f_man_rever" data-k="man.rever" type="date" autocomplete="off">
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="g2">
+      <div class="fld">
+        <label for="f_man_mantenho">O que eu mantenho</label>
+        <p class="hint" id="f_man_mantenho_h">O que continua valendo todos os dias, mesmo depois da meta.</p>
+        <textarea id="f_man_mantenho" data-k="man.mantenho" rows="5" aria-describedby="f_man_mantenho_h"></textarea>
+      </div>
+      <div class="fld">
+        <label for="f_man_flex">O que eu flexibilizo</label>
+        <p class="hint" id="f_man_flex_h">O que pode variar sem ser deslize: festas, viagens, fins de semana.</p>
+        <textarea id="f_man_flex" data-k="man.flex" rows="5" aria-describedby="f_man_flex_h"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="q hl" style="margin:0">
+      <h2 style="margin-bottom:4px">Meu sinal amarelo</h2>
+      <p class="hint">É o aviso antes de voltar. Um peso ou uma roupa que me diz: está na hora de agir cedo. Ele é o combinado que eu fiz comigo para agir cedo.</p>
+      <div class="g2" style="margin-top:10px">
+        <div class="fld">
+          <label for="f_man_sinal_peso">Peso que me avisa</label>
+          <div class="inwrap">
+            <input id="f_man_sinal_peso" data-k="man.sinal.peso" type="text" inputmode="decimal" autocomplete="off"><span class="unit" aria-hidden="true">kg</span>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f_man_sinal_roupa">Roupa que me avisa</label>
+          <p class="hint" id="f_man_sinal_roupa_h">A peça que começa a apertar.</p>
+          <input id="f_man_sinal_roupa" data-k="man.sinal.roupa" type="text" autocomplete="off" aria-describedby="f_man_sinal_roupa_h">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blk">
+    <div class="fld">
+      <label for="f_man_faco">Quando o sinal acender, eu faço</label>
+      <p class="hint" id="f_man_faco_h">Passos concretos: o que eu retomo, com quem eu falo, o que eu releio.</p>
+      <textarea id="f_man_faco" data-k="man.faco" rows="5" aria-describedby="f_man_faco_h"></textarea>
+    </div>
+  </div>
+</div>
+<aside class="marco" data-marco="manutencao">
+  <div class="mk">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"></path></svg>
+  </div>
+  <div>
+    <div class="mt">
+      Marco desta ferramenta
+    </div>
+    <p>Escrever o plano de manutenção antes de a meta chegar.</p>
+    <p class="ms" data-ms role="status" data-done="Conquistado. O seu plano de manutenção foi escrito antes de a meta chegar."></p>
+    <button type="button" class="btn sm mcb" data-act="x-mc" data-id="manutencao" data-mcb>Marcar como conquistado</button>
+  </div>
+</aside>
+</section>
+
+<!-- Frases que o programa mostra conforme o que a cliente preenche. Texto comum, pode ser editado. -->
+<template data-msg="falta-mantem">escrever o que você mantém e o que flexibiliza</template>
+<template data-msg="falta-sinal">definir o seu sinal amarelo (peso ou roupa)</template>
+<template data-msg="falta-faco">escrever o que você faz quando o sinal acender</template>
+
+<script src="../lista.js"></script>
+<script src="../config.js"></script>
+<script src="../kit.js"></script>
+<script>
+/* Comportamento desta ferramenta. O texto fica no HTML acima. */
+Kit.ferramenta('manutencao',function(K){
+'use strict';
+var val=K.val,msg=K.msg;
+return {
+falta:function(){var m=[];if(!val('man.mantenho')||!val('man.flex'))m.push(msg('falta-mantem'));if(!val('man.sinal.peso')&&!val('man.sinal.roupa'))m.push(msg('falta-sinal'));if(!val('man.faco'))m.push(msg('falta-faco'));return m}
+};
+});
+</script>
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Novo link de cliente · EmagreSER</title>
+<link rel="stylesheet" href="estilo.css">
+<style>
+.nl-out{margin-top:18px}
+.nl-link{display:block;width:100%;word-break:break-all;background:var(--fill);border:1.5px solid var(--line2);border-radius:10px;padding:12px 14px;font-size:16px;color:var(--ink)}
+.nl-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.nl-msg{white-space:pre-wrap;background:var(--fill);border:1.5px solid var(--line2);border-radius:10px;padding:12px 14px;font-size:16px}
+.nl-aviso{background:var(--acc-bg);border:1.5px solid var(--acc);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:16px}
+</style>
+</head>
+<body>
+<main class="main"><div class="mainin">
+<section class="sheet on" aria-labelledby="h-novo">
+  <header class="shead">
+    <div class="eyebrow">Só para a Luciana</div>
+    <h1 id="h-novo" tabindex="-1">Gerar o link de uma cliente nova</h1>
+    <p class="lead">Escreva o nome da cliente e toque em Gerar link. A página cria um código só dela, abre a ficha dela no banco e devolve o link pronto para você mandar.</p>
+  </header>
+
+  <div class="nl-aviso" id="nlAviso" hidden></div>
+
+  <div class="paper">
+    <h2>Dados da cliente</h2>
+    <div class="g2" style="margin-top:10px">
+      <div class="fld"><label for="nlNome">Nome da cliente</label><p class="hint" id="nlNomeH">Só para você reconhecer a ficha na tabela do banco. A cliente não vê.</p><input id="nlNome" type="text" autocomplete="off" maxlength="120" aria-describedby="nlNomeH"></div>
+      <div class="fld"><label for="nlSenha">Sua senha de criação</label><p class="hint" id="nlSenhaH">A que você escolheu ao rodar o banco.sql. Esta página não guarda a senha.</p><input id="nlSenha" type="password" autocomplete="off" aria-describedby="nlSenhaH"></div>
+    </div>
+    <div class="nl-row"><button type="button" class="btn pri" id="nlGerar">Gerar link</button></div>
+    <p class="msg" id="nlMsg" role="alert"></p>
+
+    <div class="nl-out" id="nlOut" hidden>
+      <h2>Link pronto</h2>
+      <p class="hint" id="nlPara"></p>
+      <h3 style="margin-top:14px">Link da cliente</h3>
+      <p class="hint">É este que você manda para ela. Ela abre, preenche e o que escreve fica guardado.</p>
+      <code class="nl-link" id="nlLinkCli"></code>
+      <div class="nl-row"><button type="button" class="btn pri" id="nlCopiaCli">Copiar link da cliente</button><span class="hint" id="nlOkCli" role="status" style="margin:0"></span></div>
+
+      <h3 style="margin-top:22px">Mensagem pronta para mandar</h3>
+      <div class="nl-msg" id="nlTxt"></div>
+      <div class="nl-row"><button type="button" class="btn" id="nlCopiaTxt">Copiar mensagem</button><span class="hint" id="nlOkTxt" role="status" style="margin:0"></span></div>
+
+      <h3 style="margin-top:22px">Link de leitura, só para você</h3>
+      <p class="hint">Abre a ficha dela só para ler, sem risco de mudar nada. Não mande para a cliente.</p>
+      <code class="nl-link" id="nlLinkLei"></code>
+      <div class="nl-row"><button type="button" class="btn" id="nlCopiaLei">Copiar link de leitura</button><span class="hint" id="nlOkLei" role="status" style="margin:0"></span></div>
+
+      <p class="hint" style="margin-top:22px"><b>Guarde agora.</b> Cole os dois links no Notion, ao lado do nome da cliente. Quando você sair desta página, o código não aparece de novo.</p>
+    </div>
+  </div>
+
+  <div class="paper">
+    <h2>Onde fica a lista das clientes</h2>
+    <p>A lista de quem recebeu qual link você guarda no seu Notion, ao lado do nome da cliente. Esta página não lista as clientes de propósito: uma página pública com todas as clientes poderia ser aberta por qualquer pessoa. Por isso ela só cria links novos e nunca mostra os que já existem.</p>
+    <p style="margin-top:10px">Esta página não faz parte do que a cliente recebe. Não mande este endereço para ninguém.</p>
+  </div>
+</section>
+</div></main>
+
+<script src="config.js"></script>
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)};
+var CFG=window.KIT_CONFIG||{};
+var ON=CFG.ligado===true&&String(CFG.enderecoDoProjeto||'').trim()&&String(CFG.chavePublica||'').trim();
+var busy=false;
+
+if(!ON){var a=$('#nlAviso');a.hidden=false;a.textContent='O config.js ainda não está preenchido e ligado. Preencha o endereço do projeto, a chave pública e troque o interruptor para true. Depois volte aqui.';$('#nlGerar').disabled=true}
+if(location.protocol==='file:'){var b=$('#nlAviso');b.hidden=false;b.textContent=(ON?'':b.textContent+' ')+'Esta página está aberta direto do seu computador. Abra pelo endereço publicado do site, senão o link da cliente sai com o endereço do seu computador, que não funciona para ela.'}
+
+/* código aleatório de 24 letras e números (sem as parecidas), mais de 100 bits */
+function codigo(){
+  var al='abcdefghjkmnpqrstuvwxyz23456789',n=24,u=new Uint8Array(n),o='';
+  crypto.getRandomValues(u);
+  for(var i=0;i<n;i++)o+=al.charAt(u[i]%al.length);
+  return o;
+}
+function base(){return location.href.replace(/[#?].*$/,'').replace(/novo-link\.html$/,'')}
+function copia(txt,ok){
+  function fim(){ok.textContent='Copiado.';setTimeout(function(){ok.textContent=''},2500)}
+  if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(txt).then(fim,function(){manual()});else manual();
+  function manual(){var t=document.createElement('textarea');t.value=txt;t.style.cssText='position:fixed;left:-9999px';document.body.appendChild(t);t.select();try{document.execCommand('copy');fim()}catch(e){ok.textContent='Não consegui copiar. Selecione o texto e copie.'}t.remove()}
+}
+function chamar(corpo){
+  var url=String(CFG.enderecoDoProjeto).trim().replace(/\/+$/,'')+'/rest/v1/rpc/criar_ficha',ch=String(CFG.chavePublica).trim();
+  var h={'Content-Type':'application/json','apikey':ch};if(/^eyJ/.test(ch))h['Authorization']='Bearer '+ch;
+  return fetch(url,{method:'POST',headers:h,body:JSON.stringify(corpo)}).then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok){var e=new Error(j&&j.message||('http '+r.status));e.status=r.status;throw e}return j})});
+}
+$('#nlGerar').addEventListener('click',function(){
+  if(busy)return;
+  var msg=$('#nlMsg'),nome=$('#nlNome').value.replace(/\s+/g,' ').trim(),senha=$('#nlSenha').value;
+  msg.textContent='';
+  if(!nome){msg.textContent='Escreva o nome da cliente.';$('#nlNome').focus();return}
+  if(!senha){msg.textContent='Escreva a sua senha de criação.';$('#nlSenha').focus();return}
+  busy=true;this.disabled=true;this.textContent='Criando...';
+  var btn=this,c=codigo();
+  chamar({p_senha:senha,p_codigo:c,p_nome:nome}).then(function(){
+    var cli=base()+'index.html?c='+c,lei=cli+'&ver=1';
+    $('#nlPara').textContent='Ficha criada para '+nome+'.';
+    $('#nlLinkCli').textContent=cli;$('#nlLinkLei').textContent=lei;
+    $('#nlTxt').textContent='Oi, '+nome.split(' ')[0]+'! Aqui está o seu kit de ferramentas do método EmagreSER. Este link é só seu: abra no celular ou no computador e preencha no seu ritmo. Tudo o que você escrever fica guardado e volta quando você abrir o mesmo link, em qualquer aparelho. Salve esta mensagem e não passe o link para ninguém. As fotos ficam só no seu aparelho.\n\n'+cli;
+    $('#nlOut').hidden=false;
+    $('#nlCopiaCli').onclick=function(){copia(cli,$('#nlOkCli'))};
+    $('#nlCopiaTxt').onclick=function(){copia($('#nlTxt').textContent,$('#nlOkTxt'))};
+    $('#nlCopiaLei').onclick=function(){copia(lei,$('#nlOkLei'))};
+    $('#nlNome').value='';$('#nlSenha').value='';
+    $('#nlOut').scrollIntoView({block:'nearest'});
+  }).catch(function(e){
+    var m=String(e&&e.message||'');
+    if(m.indexOf('senha_incorreta')>-1)msg.textContent='A senha de criação não confere. Confira como você escreveu no banco.sql.';
+    else if(m.indexOf('senha_nao_definida')>-1)msg.textContent='Você ainda não trocou a senha dentro do banco.sql. Troque, rode o script de novo e tente outra vez.';
+    else if(m.indexOf('Failed to fetch')>-1||m.indexOf('NetworkError')>-1||m.indexOf('Load failed')>-1||!e.status)msg.textContent='Não consegui falar com o banco. Confira a internet e o endereço no config.js.';
+    else msg.textContent='O banco recusou o pedido ('+m+'). Confira se o banco.sql foi rodado até o fim e se o config.js está certo.';
+  }).then(function(){busy=false;btn.disabled=!ON;btn.textContent='Gerar link'});
+});
+})();
+</script>
+</body></html>
